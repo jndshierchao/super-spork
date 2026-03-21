@@ -1,0 +1,14 @@
+# Tencent Cloud ASR Dependencies
+# Install with: pip install -r requirements.txt
+
+# Tencent Cloud SDK
+tencentcloud-sdk-python-core>=3.0.0
+
+# For realtime ASR
+websocket-client>=1.0.0
+
+# For audio recording and playback (optional)
+pyaudio>=0.2.11
+
+# For audio file processing (optional)
+pydub>=0.25.1
