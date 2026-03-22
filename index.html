@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI导航 - 最全AI工具集合 | 2026国内外AI工具导航</title>
-    <meta name="description" content="发现最全的AI工具导航网站，涵盖AI写作、AI绘画、AI视频、AI办公等分类，汇集1000+国内外AI工具，包含ChatGPT、Midjourney、Claude等热门工具。">
-    <meta name="keywords" content="AI工具,ChatGPT,Midjourney,Claude,AI绘画,AI写作,AI视频,AI导航,AI工具导航,AI工具集">
+    <title>墨叙AI - 最全AI工具导航 | AI Tools Directory</title>
+    <meta name="description" content="发现最全的AI工具导航网站，汇集1000+国内外AI工具，包含ChatGPT、Claude、Midjourney等热门工具。">
+    <meta name="keywords" content="AI工具,ChatGPT,Midjourney,Claude,AI绘画,AI写作,AI视频,AI导航,AI工具集,墨叙AI">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧠</text></svg>">
     
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID" crossorigin="anonymous"></script>
@@ -38,6 +39,23 @@
             --shadow-lg: 0 25px 50px -12px rgba(0,0,0,0.6);
         }
 
+        /* 白色主题 */
+        [data-theme="light"] {
+            --bg-dark: #f8fafc;
+            --bg-main: #ffffff;
+            --bg-card: #f1f5f9;
+            --bg-card-hover: #e2e8f0;
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            --border: rgba(0,0,0,0.08);
+            --glass: rgba(255, 255, 255, 0.8);
+            --glass-border: rgba(0,0,0,0.1);
+            --gradient-bg: radial-gradient(ellipse at top, #eff6ff 0%, #f8fafc 50%);
+            --shadow: 0 4px 24px -4px rgba(0,0,0,0.1);
+            --shadow-lg: 0 25px 50px -12px rgba(0,0,0,0.15);
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
@@ -47,6 +65,7 @@
             line-height: 1.6;
             min-height: 100vh;
             background-image: var(--gradient-bg);
+            transition: background 0.3s, color 0.3s;
         }
 
         a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
@@ -58,7 +77,7 @@
             left: 0;
             right: 0;
             height: 70px;
-            background: rgba(3, 7, 18, 0.85);
+            background: var(--glass);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
             z-index: 1000;
@@ -66,6 +85,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 40px;
+            transition: background 0.3s;
         }
 
         .logo {
@@ -104,11 +124,38 @@
             font-weight: 500;
             color: var(--text-secondary);
             transition: all 0.2s;
+            cursor: pointer;
         }
 
         .nav-link:hover, .nav-link.active {
             background: rgba(59, 130, 246, 0.15);
             color: var(--primary-light);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .theme-toggle, .lang-toggle {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            transition: all 0.2s;
+        }
+
+        .theme-toggle:hover, .lang-toggle:hover {
+            background: var(--bg-card-hover);
+            transform: scale(1.05);
         }
 
         .search-box {
@@ -119,7 +166,7 @@
             border-radius: 12px;
             padding: 0 16px;
             height: 44px;
-            width: 320px;
+            width: 280px;
             transition: all 0.3s;
         }
 
@@ -142,11 +189,6 @@
             color: var(--text-muted);
         }
 
-        .search-icon {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
-
         /* 主内容区 */
         .main-container {
             padding-top: 90px;
@@ -159,7 +201,6 @@
             gap: 30px;
         }
 
-        /* 左侧内容 */
         .content-area {
             min-width: 0;
         }
@@ -190,10 +231,6 @@
             font-size: 2.2rem;
             font-weight: 900;
             margin-bottom: 12px;
-            background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
         }
 
         .hero-subtitle {
@@ -325,6 +362,15 @@
             justify-content: center;
             font-size: 1.5rem;
             flex-shrink: 0;
+            background: var(--bg-card-hover);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tool-icon img {
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
         }
 
         .tool-info {
@@ -417,6 +463,7 @@
             border-radius: 16px;
             padding: 24px;
             margin-bottom: 20px;
+            transition: background 0.3s;
         }
 
         .sidebar-title {
@@ -428,7 +475,6 @@
             gap: 8px;
         }
 
-        /* 热门推荐 */
         .hot-list {
             display: flex;
             flex-direction: column;
@@ -478,6 +524,15 @@
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .hot-name img {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
         }
 
         .hot-desc {
@@ -488,7 +543,6 @@
             text-overflow: ellipsis;
         }
 
-        /* 快捷入口 */
         .quick-links {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -512,6 +566,12 @@
             transform: translateY(-2px);
         }
 
+        .quick-link img {
+            width: 18px;
+            height: 18px;
+            border-radius: 4px;
+        }
+
         /* 页脚 */
         .footer {
             background: var(--glass);
@@ -519,6 +579,7 @@
             padding: 40px;
             margin-top: 60px;
             text-align: center;
+            transition: background 0.3s;
         }
 
         .footer-content {
@@ -611,6 +672,13 @@
             align-items: center;
             justify-content: center;
             font-size: 1.8rem;
+            background: var(--bg-card);
+        }
+
+        .modal-icon img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
         }
 
         .modal-title {
@@ -710,6 +778,10 @@
             .tools-grid {
                 grid-template-columns: 1fr;
             }
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
         }
 
         /* 滚动条 */
@@ -733,22 +805,26 @@
     <!-- 导航栏 -->
     <nav class="navbar">
         <a href="/" class="logo">
-            <div class="logo-icon">🤖</div>
-            <span>AI导航</span>
+            <div class="logo-icon">🧠</div>
+            <span data-lang-zh="墨叙AI" data-lang-en="MoXu AI">墨叙AI</span>
         </a>
         <div class="nav-links" id="navLinks">
-            <a href="#" class="nav-link active" data-category="all">全部</a>
-            <a href="#" class="nav-link" data-category="chat">AI对话</a>
-            <a href="#" class="nav-link" data-category="writing">AI写作</a>
-            <a href="#" class="nav-link" data-category="image">AI绘画</a>
-            <a href="#" class="nav-link" data-category="video">AI视频</a>
-            <a href="#" class="nav-link" data-category="code">AI编程</a>
-            <a href="#" class="nav-link" data-category="office">AI办公</a>
-            <a href="#" class="nav-link" data-category="breed">AI导航</a>
+            <a href="#" class="nav-link active" data-category="all" data-lang-zh="全部" data-lang-en="All">全部</a>
+            <a href="#" class="nav-link" data-category="chat" data-lang-zh="AI对话" data-lang-en="AI Chat">AI对话</a>
+            <a href="#" class="nav-link" data-category="writing" data-lang-zh="AI写作" data-lang-en="AI Writing">AI写作</a>
+            <a href="#" class="nav-link" data-category="image" data-lang-zh="AI绘画" data-lang-en="AI Image">AI绘画</a>
+            <a href="#" class="nav-link" data-category="video" data-lang-zh="AI视频" data-lang-en="AI Video">AI视频</a>
+            <a href="#" class="nav-link" data-category="code" data-lang-zh="AI编程" data-lang-en="AI Code">AI编程</a>
+            <a href="#" class="nav-link" data-category="office" data-lang-zh="AI办公" data-lang-en="AI Office">AI办公</a>
+            <a href="#" class="nav-link" data-category="breed" data-lang-zh="AI导航" data-lang-en="AI Directory">AI导航</a>
         </div>
-        <div class="search-box">
-            <span class="search-icon">🔍</span>
-            <input type="text" id="searchInput" placeholder="搜索AI工具...">
+        <div class="nav-right">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" data-placeholder-zh="搜索AI工具..." data-placeholder-en="Search AI tools..." placeholder="搜索AI工具...">
+            </div>
+            <button class="theme-toggle" id="themeToggle" title="切换主题">🌙</button>
+            <button class="lang-toggle" id="langToggle" title="中/EN">中</button>
         </div>
     </nav>
 
@@ -757,20 +833,20 @@
         <div class="content-area">
             <!-- 横幅 -->
             <div class="hero-banner">
-                <h1 class="hero-title">发现最全的AI工具集合</h1>
-                <p class="hero-subtitle">汇集1000+国内外优秀AI工具，涵盖写作、绘画、视频、办公等场景</p>
+                <h1 class="hero-title" data-lang-zh="发现最全的AI工具集合" data-lang-en="Discover the Most Complete AI Tools">发现最全的AI工具集合</h1>
+                <p class="hero-subtitle" data-lang-zh="汇集1000+国内外优秀AI工具，涵盖写作、绘画、视频、办公等场景" data-lang-en="Collect 1000+ excellent AI tools from home and abroad">汇集1000+国内外优秀AI工具，涵盖写作、绘画、视频、办公等场景</p>
                 <div class="hero-stats">
                     <div class="stat-item">
                         <div class="stat-number" id="toolCount">80+</div>
-                        <div class="stat-label">AI工具</div>
+                        <div class="stat-label" data-lang-zh="AI工具" data-lang-en="AI Tools">AI工具</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">12</div>
-                        <div class="stat-label">分类</div>
+                        <div class="stat-label" data-lang-zh="分类" data-lang-en="Categories">分类</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">100%</div>
-                        <div class="stat-label">免费</div>
+                        <div class="stat-label" data-lang-zh="免费" data-lang-en="Free">免费</div>
                     </div>
                 </div>
             </div>
@@ -778,39 +854,39 @@
             <!-- 分类标签 -->
             <div class="category-tabs" id="categoryTabs">
                 <div class="category-tab active" data-category="all">
-                    <span>全部</span>
+                    <span data-lang-zh="全部" data-lang-en="All">全部</span>
                     <span class="count">80+</span>
                 </div>
                 <div class="category-tab" data-category="chat">
-                    <span>💬</span> AI对话
+                    <span>💬</span> <span data-lang-zh="AI对话" data-lang-en="AI Chat">AI对话</span>
                     <span class="count">8</span>
                 </div>
                 <div class="category-tab" data-category="writing">
-                    <span>✍️</span> AI写作
+                    <span>✍️</span> <span data-lang-zh="AI写作" data-lang-en="AI Writing">AI写作</span>
                     <span class="count">7</span>
                 </div>
                 <div class="category-tab" data-category="image">
-                    <span>🎨</span> AI绘画
+                    <span>🎨</span> <span data-lang-zh="AI绘画" data-lang-en="AI Image">AI绘画</span>
                     <span class="count">10</span>
                 </div>
                 <div class="category-tab" data-category="video">
-                    <span>🎬</span> AI视频
+                    <span>🎬</span> <span data-lang-zh="AI视频" data-lang-en="AI Video">AI视频</span>
                     <span class="count">9</span>
                 </div>
                 <div class="category-tab" data-category="audio">
-                    <span>🎵</span> AI音频
+                    <span>🎵</span> <span data-lang-zh="AI音频" data-lang-en="AI Audio">AI音频</span>
                     <span class="count">6</span>
                 </div>
                 <div class="category-tab" data-category="code">
-                    <span>💻</span> AI编程
+                    <span>💻</span> <span data-lang-zh="AI编程" data-lang-en="AI Code">AI编程</span>
                     <span class="count">7</span>
                 </div>
                 <div class="category-tab" data-category="office">
-                    <span>📊</span> AI办公
+                    <span>📊</span> <span data-lang-zh="AI办公" data-lang-en="AI Office">AI办公</span>
                     <span class="count">6</span>
                 </div>
                 <div class="category-tab" data-category="breed">
-                    <span>🧭</span> AI导航
+                    <span>🧭</span> <span data-lang-zh="AI导航" data-lang-en="AI Directory">AI导航</span>
                     <span class="count">12</span>
                 </div>
             </div>
@@ -822,24 +898,24 @@
         <!-- 侧边栏 -->
         <aside class="sidebar">
             <div class="sidebar-section">
-                <h3 class="sidebar-title">🔥 热门推荐</h3>
+                <h3 class="sidebar-title" data-lang-zh="🔥 热门推荐" data-lang-en="🔥 Hot">🔥 热门推荐</h3>
                 <div class="hot-list" id="hotList"></div>
             </div>
 
             <div class="sidebar-section">
-                <h3 class="sidebar-title">⚡ 快捷入口</h3>
+                <h3 class="sidebar-title" data-lang-zh="⚡ 快捷入口" data-lang-en="⚡ Quick">⚡ 快捷入口</h3>
                 <div class="quick-links">
                     <a href="https://chat.openai.com" target="_blank" class="quick-link">
-                        <span>🤖</span> ChatGPT
+                        <img src="https://chat.openai.com/favicon.ico" onerror="this.style.display='none'"> ChatGPT
                     </a>
                     <a href="https://claude.ai" target="_blank" class="quick-link">
-                        <span>🧠</span> Claude
+                        <img src="https://claude.ai/favicon.ico" onerror="this.style.display='none'"> Claude
                     </a>
                     <a href="https://kimi.moonshot.cn" target="_blank" class="quick-link">
-                        <span>📖</span> Kimi
+                        <img src="https://kimi.moonshot.cn/favicon.ico" onerror="this.style.display='none'"> Kimi
                     </a>
                     <a href="https://www.midjourney.com" target="_blank" class="quick-link">
-                        <span>🖼️</span> Midjourney
+                        <img src="https://www.midjourney.com/favicon.ico" onerror="this.style.display='none'"> Midjourney
                     </a>
                 </div>
             </div>
@@ -849,12 +925,12 @@
     <!-- 页脚 -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-logo">🤖 AI导航</div>
-            <p class="footer-desc">发现最全的AI工具导航网站，让AI帮助你提升工作效率</p>
+            <div class="footer-logo">🧠 墨叙AI</div>
+            <p class="footer-desc" data-lang-zh="发现最全的AI工具导航网站，让AI帮助你提升工作效率" data-lang-en="Discover the most complete AI tools navigation website">发现最全的AI工具导航网站，让AI帮助你提升工作效率</p>
             <div class="footer-links">
-                <a href="#" class="footer-link">关于我们</a>
-                <a href="#" class="footer-link">联系方式</a>
-                <a href="#" class="footer-link">隐私政策</a>
+                <a href="#" class="footer-link" data-lang-zh="关于我们" data-lang-en="About">关于我们</a>
+                <a href="#" class="footer-link" data-lang-zh="联系方式" data-lang-en="Contact">联系方式</a>
+                <a href="#" class="footer-link" data-lang-zh="隐私政策" data-lang-en="Privacy">隐私政策</a>
                 <a href="https://github.com/jndshierchao/super-spork" class="footer-link">GitHub</a>
             </div>
         </div>
@@ -873,120 +949,143 @@
             <div class="modal-desc" id="modalDesc"></div>
             <div class="modal-tags" id="modalTags"></div>
             <a href="#" class="modal-btn" id="modalBtn" target="_blank">
-                立即访问 →
+                <span data-lang-zh="立即访问 →" data-lang-en="Visit Now →">立即访问 →</span>
             </a>
         </div>
     </div>
 
     <script>
+        // 获取favicon的函数
+        function getFavicon(url) {
+            try {
+                const domain = new URL(url).hostname;
+                return `https://www.google.com/s2/favicons?domain=${domain}&sz=64`;
+            } catch {
+                return '';
+            }
+        }
+
         // 工具数据
         const tools = [
             // AI对话
-            { id: 1, name: "ChatGPT", category: "chat", icon: "🤖", iconBg: "#10a37f", desc: "OpenAI推出的AI对话助手，支持GPT-4o最新模型", tags: ["AI对话", "免费/付费"], url: "https://chat.openai.com", price: "freemium" },
-            { id: 2, name: "Claude", category: "chat", icon: "🧠", iconBg: "#d97706", desc: "Anthropic推出的AI助手，以长文本处理能力著称", tags: ["AI对话", "免费"], url: "https://claude.ai", price: "freemium" },
-            { id: 3, name: "Kimi", category: "chat", icon: "📖", iconBg: "#6366f1", desc: "月之暗面推出的AI助手，支持超长上下文", tags: ["AI对话", "免费"], url: "https://kimi.moonshot.cn", price: "free" },
-            { id: 4, name: "豆包", category: "chat", icon: "🫛", iconBg: "#2563eb", desc: "字节跳动推出的AI助手，免费且功能丰富", tags: ["AI对话", "免费"], url: "https://www.doubao.com", price: "free" },
-            { id: 5, name: "通义千问", category: "chat", icon: "🏹", iconBg: "#9333ea", desc: "阿里巴巴推出的AI助手，支持多轮对话", tags: ["AI对话", "免费"], url: "https://tongyi.aliyun.com", price: "free" },
-            { id: 6, name: "文心一言", category: "chat", icon: "🖌️", iconBg: "#ea580c", desc: "百度推出的AI助手，支持文学创作", tags: ["AI对话", "免费"], url: "https://yiyan.baidu.com", price: "free" },
-            { id: 7, name: "Gemini", category: "chat", icon: "🌟", iconBg: "#4285f4", desc: "Google推出的AI助手，深度集成搜索", tags: ["AI对话", "免费"], url: "https://gemini.google.com", price: "free" },
-            { id: 8, name: "Poe", category: "chat", icon: "💬", iconBg: "#8b5cf6", desc: "集成多个AI机器人的对话平台", tags: ["AI对话", "免费/付费"], url: "https://poe.com", price: "freemium" },
+            { id: 1, name: "ChatGPT", category: "chat", icon: "", iconBg: "#10a37f", desc: "OpenAI推出的AI对话助手，支持GPT-4o最新模型", desc_en: "OpenAI's AI chatbot, supporting GPT-4o", tags: ["AI对话", "免费/付费"], tags_en: ["AI Chat", "Free/Paid"], url: "https://chat.openai.com", price: "freemium" },
+            { id: 2, name: "Claude", category: "chat", icon: "", iconBg: "#d97706", desc: "Anthropic推出的AI助手，以长文本处理能力著称", desc_en: "Anthropic's AI assistant, known for long text processing", tags: ["AI对话", "免费"], tags_en: ["AI Chat", "Free"], url: "https://claude.ai", price: "freemium" },
+            { id: 3, name: "Kimi", category: "chat", icon: "", iconBg: "#6366f1", desc: "月之暗面推出的AI助手，支持超长上下文", desc_en: "Moonshot AI's assistant, supports ultra-long context", tags: ["AI对话", "免费"], tags_en: ["AI Chat", "Free"], url: "https://kimi.moonshot.cn", price: "free" },
+            { id: 4, name: "豆包", category: "chat", icon: "", iconBg: "#2563eb", desc: "字节跳动推出的AI助手，免费且功能丰富", desc_en: "ByteDance's AI assistant, free and feature-rich", tags: ["AI对话", "免费"], tags_en: ["AI Chat", "Free"], url: "https://www.doubao.com", price: "free" },
+            { id: 5, name: "通义千问", category: "chat", icon: "", iconBg: "#9333ea", desc: "阿里巴巴推出的AI助手，支持多轮对话", desc_en: "Alibaba's AI assistant, supports multi-turn dialogue", tags: ["AI对话", "免费"], tags_en: ["AI Chat", "Free"], url: "https://tongyi.aliyun.com", price: "free" },
+            { id: 6, name: "文心一言", category: "chat", icon: "", iconBg: "#ea580c", desc: "百度推出的AI助手，支持文学创作", desc_en: "Baidu's AI assistant, supports literary creation", tags: ["AI对话", "免费"], tags_en: ["AI Chat", "Free"], url: "https://yiyan.baidu.com", price: "free" },
+            { id: 7, name: "Gemini", category: "chat", icon: "", iconBg: "#4285f4", desc: "Google推出的AI助手，深度集成搜索", desc_en: "Google's AI assistant, deeply integrated with search", tags: ["AI对话", "免费"], tags_en: ["AI Chat", "Free"], url: "https://gemini.google.com", price: "free" },
+            { id: 8, name: "Poe", category: "chat", icon: "", iconBg: "#8b5cf6", desc: "集成多个AI机器人的对话平台", desc_en: "Platform integrating multiple AI chatbots", tags: ["AI对话", "免费/付费"], tags_en: ["AI Chat", "Free/Paid"], url: "https://poe.com", price: "freemium" },
             
             // AI写作
-            { id: 9, name: "Notion AI", category: "writing", icon: "📒", iconBg: "#000", desc: "笔记软件Notion的AI写作助手", tags: ["AI写作", "付费"], url: "https://notion.so/product/ai", price: "paid" },
-            { id: 10, name: "笔灵AI写作", category: "writing", icon: "✍️", iconBg: "#6366f1", desc: "国内AI写作工具，支持多种文体", tags: ["AI写作", "免费"], url: "https://ibiling.cn", price: "freemium" },
-            { id: 11, name: "Jasper", category: "writing", icon: "💎", iconBg: "#f59e0b", desc: "AI内容创作平台，营销文案神器", tags: ["AI写作", "付费"], url: "https://jasper.ai", price: "paid" },
-            { id: 12, name: "Copy.ai", category: "writing", icon: "📋", iconBg: "#22c55e", desc: "AI文案生成工具，快速创建内容", tags: ["AI写作", "免费/付费"], url: "https://copy.ai", price: "freemium" },
-            { id: 13, name: "Writesonic", category: "writing", icon: "⚡", iconBg: "#3b82f6", desc: "AI写作和SEO优化工具", tags: ["AI写作", "免费/付费"], url: "https://writesonic.com", price: "freemium" },
-            { id: 14, name: " Grammarly", category: "writing", icon: "📝", iconBg: "#15c39a", desc: "AI英语语法检查和写作助手", tags: ["AI写作", "免费/付费"], url: "https://grammarly.com", price: "freemium" },
-            { id: 15, name: "秘塔写作猫", category: "writing", icon: "🐱", iconBg: "#6366f1", desc: "国内AI写作助手，纠错润色", tags: ["AI写作", "免费"], url: "https://xiezuocat.com", price: "free" },
+            { id: 9, name: "Notion AI", category: "writing", icon: "", iconBg: "#000", desc: "笔记软件Notion的AI写作助手", desc_en: "Notion's AI writing assistant", tags: ["AI写作", "付费"], tags_en: ["AI Writing", "Paid"], url: "https://notion.so/product/ai", price: "paid" },
+            { id: 10, name: "笔灵AI写作", category: "writing", icon: "", iconBg: "#6366f1", desc: "国内AI写作工具，支持多种文体", desc_en: "Domestic AI writing tool, multiple styles", tags: ["AI写作", "免费"], tags_en: ["AI Writing", "Free"], url: "https://ibiling.cn", price: "freemium" },
+            { id: 11, name: "Jasper", category: "writing", icon: "", iconBg: "#f59e0b", desc: "AI内容创作平台，营销文案神器", desc_en: "AI content creation platform, marketing copy tool", tags: ["AI写作", "付费"], tags_en: ["AI Writing", "Paid"], url: "https://jasper.ai", price: "paid" },
+            { id: 12, name: "Copy.ai", category: "writing", icon: "", iconBg: "#22c55e", desc: "AI文案生成工具，快速创建内容", desc_en: "AI copy generator, quick content creation", tags: ["AI写作", "免费/付费"], tags_en: ["AI Writing", "Free/Paid"], url: "https://copy.ai", price: "freemium" },
+            { id: 13, name: "Writesonic", category: "writing", icon: "", iconBg: "#3b82f6", desc: "AI写作和SEO优化工具", desc_en: "AI writing and SEO optimization tool", tags: ["AI写作", "免费/付费"], tags_en: ["AI Writing", "Free/Paid"], url: "https://writesonic.com", price: "freemium" },
+            { id: 14, name: "Grammarly", category: "writing", icon: "", iconBg: "#15c39a", desc: "AI英语语法检查和写作助手", desc_en: "AI English grammar checker and writing assistant", tags: ["AI写作", "免费/付费"], tags_en: ["AI Writing", "Free/Paid"], url: "https://grammarly.com", price: "freemium" },
+            { id: 15, name: "秘塔写作猫", category: "writing", icon: "", iconBg: "#6366f1", desc: "国内AI写作助手，纠错润色", desc_en: "Domestic AI writing assistant, error correction", tags: ["AI写作", "免费"], tags_en: ["AI Writing", "Free"], url: "https://xiezuocat.com", price: "free" },
 
             // AI绘画
-            { id: 16, name: "Midjourney", category: "image", icon: "🖼️", iconBg: "#8b5cf6", desc: "AI图像生成工具，创作惊艳艺术作品", tags: ["AI绘画", "付费"], url: "https://www.midjourney.com", price: "paid" },
-            { id: 17, name: "Stable Diffusion", category: "image", icon: "🎨", iconBg: "#f97316", desc: "开源AI图像生成模型，免费本地运行", tags: ["AI绘画", "免费"], url: "https://stability.ai", price: "free" },
-            { id: 18, name: "DALL·E 3", category: "image", icon: "🎭", iconBg: "#10a37f", desc: "OpenAI推出的AI图像生成工具", tags: ["AI绘画", "付费"], url: "https://openai.com/dall-e-3", price: "paid" },
-            { id: 19, name: "Leonardo.ai", category: "image", icon: "🦁", iconBg: "#22c55e", desc: "免费AI绘画平台，功能强大", tags: ["AI绘画", "免费"], url: "https://leonardo.ai", price: "freemium" },
-            { id: 20, name: "LiblibAI", category: "image", icon: "📚", iconBg: "#ec4899", desc: "国内AI绘画社区，海量模型", tags: ["AI绘画", "免费"], url: "https://www.liblib.ai", price: "free" },
-            { id: 21, name: "堆友", category: "image", icon: "👤", iconBg: "#f59e0b", desc: "阿里出品的AI绘画工具", tags: ["AI绘画", "免费"], url: "https://d.design", price: "free" },
-            { id: 22, name: "通义万相", category: "image", icon: "🖌️", iconBg: "#9333ea", desc: "阿里通义万相AI绘画", tags: ["AI绘画", "免费"], url: "https://tongyi.aliyun.com/wanxiang", price: "free" },
-            { id: 23, name: "文心一格", category: "image", icon: "🎯", iconBg: "#ea580c", desc: "百度AI绘画工具", tags: ["AI绘画", "免费"], url: "https://yige.baidu.com", price: "free" },
-            { id: 24, name: "秒画", category: "image", icon: "⚡", iconBg: "#3b82f6", desc: "商汤科技AI绘画工具", tags: ["AI绘画", "免费"], url: "https://miaohua.sensetime.com", price: "free" },
-            { id: 25, name: "Canva", category: "image", icon: "🎪", iconBg: "#06b6d4", desc: "在线设计平台，AI辅助设计", tags: ["AI设计", "免费/付费"], url: "https://www.canva.com", price: "freemium" },
+            { id: 16, name: "Midjourney", category: "image", icon: "", iconBg: "#8b5cf6", desc: "AI图像生成工具，创作惊艳艺术作品", desc_en: "AI image generator, create stunning art", tags: ["AI绘画", "付费"], tags_en: ["AI Image", "Paid"], url: "https://www.midjourney.com", price: "paid" },
+            { id: 17, name: "Stable Diffusion", category: "image", icon: "", iconBg: "#f97316", desc: "开源AI图像生成模型，免费本地运行", desc_en: "Open-source AI image generator, free local run", tags: ["AI绘画", "免费"], tags_en: ["AI Image", "Free"], url: "https://stability.ai", price: "free" },
+            { id: 18, name: "DALL·E 3", category: "image", icon: "", iconBg: "#10a37f", desc: "OpenAI推出的AI图像生成工具", desc_en: "OpenAI's AI image generation tool", tags: ["AI绘画", "付费"], tags_en: ["AI Image", "Paid"], url: "https://openai.com/dall-e-3", price: "paid" },
+            { id: 19, name: "Leonardo.ai", category: "image", icon: "", iconBg: "#22c55e", desc: "免费AI绘画平台，功能强大", desc_en: "Free AI painting platform, powerful features", tags: ["AI绘画", "免费"], tags_en: ["AI Image", "Free"], url: "https://leonardo.ai", price: "freemium" },
+            { id: 20, name: "LiblibAI", category: "image", icon: "", iconBg: "#ec4899", desc: "国内AI绘画社区，海量模型", desc_en: "Domestic AI painting community, massive models", tags: ["AI绘画", "免费"], tags_en: ["AI Image", "Free"], url: "https://www.liblib.ai", price: "free" },
+            { id: 21, name: "堆友", category: "image", icon: "", iconBg: "#f59e0b", desc: "阿里出品的AI绘画工具", desc_en: "Alibaba's AI painting tool", tags: ["AI绘画", "免费"], tags_en: ["AI Image", "Free"], url: "https://d.design", price: "free" },
+            { id: 22, name: "通义万相", category: "image", icon: "", iconBg: "#9333ea", desc: "阿里通义万相AI绘画", desc_en: "Alibaba Tongyi Wanxiang AI painting", tags: ["AI绘画", "免费"], tags_en: ["AI Image", "Free"], url: "https://tongyi.aliyun.com/wanxiang", price: "free" },
+            { id: 23, name: "文心一格", category: "image", icon: "", iconBg: "#ea580c", desc: "百度AI绘画工具", desc_en: "Baidu AI painting tool", tags: ["AI绘画", "免费"], tags_en: ["AI Image", "Free"], url: "https://yige.baidu.com", price: "free" },
+            { id: 24, name: "秒画", category: "image", icon: "", iconBg: "#3b82f6", desc: "商汤科技AI绘画工具", desc_en: "SenseTime AI painting tool", tags: ["AI绘画", "免费"], tags_en: ["AI Image", "Free"], url: "https://miaohua.sensetime.com", price: "free" },
+            { id: 25, name: "Canva", category: "image", icon: "", iconBg: "#06b6d4", desc: "在线设计平台，AI辅助设计", desc_en: "Online design platform, AI-assisted design", tags: ["AI设计", "免费/付费"], tags_en: ["AI Design", "Free/Paid"], url: "https://www.canva.com", price: "freemium" },
 
             // AI视频
-            { id: 26, name: "Sora", category: "video", icon: "🎬", iconBg: "#8b5cf6", desc: "OpenAI推出的AI视频生成工具", tags: ["AI视频", "免费"], url: "https://openai.com/sora", price: "free" },
-            { id: 27, name: "Runway", category: "video", icon: "🎥", iconBg: "#8b5cf6", desc: "AI视频生成和编辑平台", tags: ["AI视频", "免费/付费"], url: "https://runway.ml", price: "freemium" },
-            { id: 28, name: "Pika", category: "video", icon: "🎞️", iconBg: "#ec4899", desc: "AI视频生成工具，快速创建视频", tags: ["AI视频", "免费"], url: "https://pika.art", price: "free" },
-            { id: 29, name: "HeyGen", category: "video", icon: "👤", iconBg: "#22c55e", desc: "AI数字人视频生成", tags: ["AI视频", "免费/付费"], url: "https://heygen.com", price: "freemium" },
-            { id: 30, name: "Luma Dream", category: "video", icon: "💭", iconBg: "#6366f1", desc: "AI视频生成，文字转视频", tags: ["AI视频", "免费"], url: "https://lumalabs.ai/dream-machine", price: "free" },
-            { id: 31, name: "可灵AI", category: "video", icon: "🔮", iconBg: "#f59e0b", desc: "快手AI视频生成工具", tags: ["AI视频", "免费"], url: "https://klingai.com", price: "free" },
-            { id: 32, name: "即梦AI", category: "video", icon: "✨", iconBg: "#ec4899", desc: "字节跳动AI图片和视频生成", tags: ["AI视频", "免费"], url: "https://jimeng.jike.com", price: "free" },
-            { id: 33, name: "Runway Gen-2", category: "video", icon: "🌊", iconBg: "#8b5cf6", desc: "AI视频生成下一代版本", tags: ["AI视频", "付费"], url: "https://runway.ml/gen2", price: "paid" },
-            { id: 34, name: "腾讯智影", category: "video", icon: "📺", iconBg: "#2563eb", desc: "腾讯AI视频创作工具", tags: ["AI视频", "免费"], url: "https://zenvideo.qq.com", price: "free" },
+            { id: 26, name: "Sora", category: "video", icon: "", iconBg: "#8b5cf6", desc: "OpenAI推出的AI视频生成工具", desc_en: "OpenAI's AI video generation tool", tags: ["AI视频", "免费"], tags_en: ["AI Video", "Free"], url: "https://openai.com/sora", price: "free" },
+            { id: 27, name: "Runway", category: "video", icon: "", iconBg: "#8b5cf6", desc: "AI视频生成和编辑平台", desc_en: "AI video generation and editing platform", tags: ["AI视频", "免费/付费"], tags_en: ["AI Video", "Free/Paid"], url: "https://runway.ml", price: "freemium" },
+            { id: 28, name: "Pika", category: "video", icon: "", iconBg: "#ec4899", desc: "AI视频生成工具，快速创建视频", desc_en: "AI video generation tool, quick video creation", tags: ["AI视频", "免费"], tags_en: ["AI Video", "Free"], url: "https://pika.art", price: "free" },
+            { id: 29, name: "HeyGen", category: "video", icon: "", iconBg: "#22c55e", desc: "AI数字人视频生成", desc_en: "AI digital human video generation", tags: ["AI视频", "免费/付费"], tags_en: ["AI Video", "Free/Paid"], url: "https://heygen.com", price: "freemium" },
+            { id: 30, name: "Luma Dream", category: "video", icon: "", iconBg: "#6366f1", desc: "AI视频生成，文字转视频", desc_en: "AI video generation, text to video", tags: ["AI视频", "免费"], tags_en: ["AI Video", "Free"], url: "https://lumalabs.ai/dream-machine", price: "free" },
+            { id: 31, name: "可灵AI", category: "video", icon: "", iconBg: "#f59e0b", desc: "快手AI视频生成工具", desc_en: "Kuaishou AI video generation tool", tags: ["AI视频", "免费"], tags_en: ["AI Video", "Free"], url: "https://klingai.com", price: "free" },
+            { id: 32, name: "即梦AI", category: "video", icon: "", iconBg: "#ec4899", desc: "字节跳动AI图片和视频生成", desc_en: "ByteDance AI image and video generation", tags: ["AI视频", "免费"], tags_en: ["AI Video", "Free"], url: "https://jimeng.jike.com", price: "free" },
+            { id: 33, name: "Runway Gen-2", category: "video", icon: "", iconBg: "#8b5cf6", desc: "AI视频生成下一代版本", desc_en: "Next-gen AI video generation", tags: ["AI视频", "付费"], tags_en: ["AI Video", "Paid"], url: "https://runway.ml/gen2", price: "paid" },
+            { id: 34, name: "腾讯智影", category: "video", icon: "", iconBg: "#2563eb", desc: "腾讯AI视频创作工具", desc_en: "Tencent AI video creation tool", tags: ["AI视频", "免费"], tags_en: ["AI Video", "Free"], url: "https://zenvideo.qq.com", price: "free" },
 
             // AI音频
-            { id: 35, name: "ElevenLabs", category: "audio", icon: "🎙️", iconBg: "#6366f1", desc: "AI语音合成，声音克隆", tags: ["AI音频", "免费/付费"], url: "https://elevenlabs.io", price: "freemium" },
-            { id: 36, name: "Murf AI", category: "audio", icon: "🗣️", iconBg: "#f59e0b", desc: "AI语音生成，商用配音", tags: ["AI音频", "付费"], url: "https://murf.ai", price: "paid" },
-            { id: 37, name: "Suno", category: "audio", icon: "🎵", iconBg: "#22c55e", desc: "AI音乐生成，创作歌曲", tags: ["AI音频", "免费"], url: "https://suno.ai", price: "free" },
-            { id: 38, name: "网易天音", category: "audio", icon: "🎶", iconBg: "#ef4444", desc: "网易AI音乐创作工具", tags: ["AI音频", "免费"], url: "https://tianyin.163.com", price: "free" },
-            { id: 39, name: "魔音工坊", category: "audio", icon: "🎤", iconBg: "#3b82f6", desc: "AI配音工具，视频创作者必备", tags: ["AI音频", "免费/付费"], url: "https://moyin.com", price: "freemium" },
-            { id: 40, name: "剪映", category: "audio", icon: "✂️", iconBg: "#ec4899", desc: "字节跳动视频编辑，AI配音功能", tags: ["AI音频", "免费"], url: "https://capcut.cn", price: "free" },
+            { id: 35, name: "ElevenLabs", category: "audio", icon: "", iconBg: "#6366f1", desc: "AI语音合成，声音克隆", desc_en: "AI voice synthesis, voice cloning", tags: ["AI音频", "免费/付费"], tags_en: ["AI Audio", "Free/Paid"], url: "https://elevenlabs.io", price: "freemium" },
+            { id: 36, name: "Murf AI", category: "audio", icon: "", iconBg: "#f59e0b", desc: "AI语音生成，商用配音", desc_en: "AI voice generation, commercial voiceover", tags: ["AI音频", "付费"], tags_en: ["AI Audio", "Paid"], url: "https://murf.ai", price: "paid" },
+            { id: 37, name: "Suno", category: "audio", icon: "", iconBg: "#22c55e", desc: "AI音乐生成，创作歌曲", desc_en: "AI music generation, song creation", tags: ["AI音频", "免费"], tags_en: ["AI Audio", "Free"], url: "https://suno.ai", price: "free" },
+            { id: 38, name: "网易天音", category: "audio", icon: "", iconBg: "#ef4444", desc: "网易AI音乐创作工具", desc_en: "NetEase AI music creation tool", tags: ["AI音频", "免费"], tags_en: ["AI Audio", "Free"], url: "https://tianyin.163.com", price: "free" },
+            { id: 39, name: "魔音工坊", category: "audio", icon: "", iconBg: "#3b82f6", desc: "AI配音工具，视频创作者必备", desc_en: "AI voiceover tool, essential for video creators", tags: ["AI音频", "免费/付费"], tags_en: ["AI Audio", "Free/Paid"], url: "https://moyin.com", price: "freemium" },
+            { id: 40, name: "剪映", category: "audio", icon: "", iconBg: "#ec4899", desc: "字节跳动视频编辑，AI配音功能", desc_en: "ByteDance video editor, AI voiceover feature", tags: ["AI音频", "免费"], tags_en: ["AI Audio", "Free"], url: "https://capcut.cn", price: "free" },
 
             // AI编程
-            { id: 41, name: "Cursor", category: "code", icon: "💻", iconBg: "#6366f1", desc: "AI代码编辑器，编程效率倍增", tags: ["AI编程", "免费"], url: "https://cursor.sh", price: "free" },
-            { id: 42, name: "GitHub Copilot", category: "code", icon: "🔵", iconBg: "#24292e", desc: "GitHub AI编程助手", tags: ["AI编程", "付费"], url: "https://github.com/features/copilot", price: "paid" },
-            { id: 43, name: "通义灵码", category: "code", icon: "🏹", iconBg: "#9333ea", desc: "阿里AI编程助手，免费使用", tags: ["AI编程", "免费"], url: "https://tongyi.aliyun.com/lingma", price: "free" },
-            { id: 44, name: "CodeWhisperer", category: "code", icon: "⚡", iconBg: "#ff9900", desc: "Amazon AI编程助手", tags: ["AI编程", "免费"], url: "https://aws.amazon.com/codewhisperer", price: "free" },
-            { id: 45, name: "Tabnine", category: "code", icon: "🔶", iconBg: "#22c55e", desc: "AI代码补全工具", tags: ["AI编程", "免费/付费"], url: "https://tabnine.com", price: "freemium" },
-            { id: 46, name: "Windsurf", category: "code", icon: "🌊", iconBg: "#8b5cf6", desc: "新一代AI编程工具", tags: ["AI编程", "免费"], url: "https://codeium.com/windsurf", price: "free" },
-            { id: 47, name: "文心快码", category: "code", icon: "🖌️", iconBg: "#ea580c", desc: "百度AI编程助手", tags: ["AI编程", "免费"], url: "https://comate.baidu.com", price: "free" },
+            { id: 41, name: "Cursor", category: "code", icon: "", iconBg: "#6366f1", desc: "AI代码编辑器，编程效率倍增", desc_en: "AI code editor, double programming efficiency", tags: ["AI编程", "免费"], tags_en: ["AI Code", "Free"], url: "https://cursor.sh", price: "free" },
+            { id: 42, name: "GitHub Copilot", category: "code", icon: "", iconBg: "#24292e", desc: "GitHub AI编程助手", desc_en: "GitHub AI programming assistant", tags: ["AI编程", "付费"], tags_en: ["AI Code", "Paid"], url: "https://github.com/features/copilot", price: "paid" },
+            { id: 43, name: "通义灵码", category: "code", icon: "", iconBg: "#9333ea", desc: "阿里AI编程助手，免费使用", desc_en: "Alibaba AI programming assistant, free to use", tags: ["AI编程", "免费"], tags_en: ["AI Code", "Free"], url: "https://tongyi.aliyun.com/lingma", price: "free" },
+            { id: 44, name: "CodeWhisperer", category: "code", icon: "", iconBg: "#ff9900", desc: "Amazon AI编程助手", desc_en: "Amazon AI programming assistant", tags: ["AI编程", "免费"], tags_en: ["AI Code", "Free"], url: "https://aws.amazon.com/codewhisperer", price: "free" },
+            { id: 45, name: "Tabnine", category: "code", icon: "", iconBg: "#22c55e", desc: "AI代码补全工具", desc_en: "AI code completion tool", tags: ["AI编程", "免费/付费"], tags_en: ["AI Code", "Free/Paid"], url: "https://tabnine.com", price: "freemium" },
+            { id: 46, name: "Windsurf", category: "code", icon: "", iconBg: "#8b5cf6", desc: "新一代AI编程工具", desc_en: "Next-gen AI programming tool", tags: ["AI编程", "免费"], tags_en: ["AI Code", "Free"], url: "https://codeium.com/windsurf", price: "free" },
+            { id: 47, name: "文心快码", category: "code", icon: "", iconBg: "#ea580c", desc: "百度AI编程助手", desc_en: "Baidu AI programming assistant", tags: ["AI编程", "免费"], tags_en: ["AI Code", "Free"], url: "https://comate.baidu.com", price: "free" },
 
             // AI办公
-            { id: 48, name: "AiPPT", category: "office", icon: "📊", iconBg: "#6366f1", desc: "AI快速生成高质量PPT", tags: ["AI办公", "免费/付费"], url: "https://aippt.cn", price: "freemium" },
-            { id: 49, name: "Gamma", category: "office", icon: "🎯", iconBg: "#8b5cf6", desc: "AI幻灯片演示生成工具", tags: ["AI办公", "免费/付费"], url: "https://gamma.app", price: "freemium" },
-            { id: 50, name: "办公小浣熊", category: "office", icon: "🐻", iconBg: "#f97316", desc: "最强AI数据分析助手", tags: ["AI办公", "免费"], url: "https://raccoon.xfyun.cn", price: "free" },
-            { id: 51, name: "百度文库AI", category: "office", icon: "📄", iconBg: "#2932e1", desc: "基于文心一言的一站式智能文档助手", tags: ["AI办公", "免费"], url: "https://wenku.baidu.com", price: "free" },
-            { id: 52, name: "Otter.ai", category: "office", icon: "🦦", iconBg: "#f59e0b", desc: "AI会议记录和转录", tags: ["AI办公", "免费/付费"], url: "https://otter.ai", price: "freemium" },
-            { id: 53, name: "Notion", category: "office", icon: "📒", iconBg: "#000", desc: "全能笔记和项目管理工具", tags: ["AI办公", "免费/付费"], url: "https://notion.so", price: "freemium" },
+            { id: 48, name: "AiPPT", category: "office", icon: "", iconBg: "#6366f1", desc: "AI快速生成高质量PPT", desc_en: "AI quickly generates high-quality PPTs", tags: ["AI办公", "免费/付费"], tags_en: ["AI Office", "Free/Paid"], url: "https://aippt.cn", price: "freemium" },
+            { id: 49, name: "Gamma", category: "office", icon: "", iconBg: "#8b5cf6", desc: "AI幻灯片演示生成工具", desc_en: "AI presentation generation tool", tags: ["AI办公", "免费/付费"], tags_en: ["AI Office", "Free/Paid"], url: "https://gamma.app", price: "freemium" },
+            { id: 50, name: "办公小浣熊", category: "office", icon: "", iconBg: "#f97316", desc: "最强AI数据分析助手", desc_en: "Best AI data analysis assistant", tags: ["AI办公", "免费"], tags_en: ["AI Office", "Free"], url: "https://raccoon.xfyun.cn", price: "free" },
+            { id: 51, name: "百度文库AI", category: "office", icon: "", iconBg: "#2932e1", desc: "基于文心一言的一站式智能文档助手", desc_en: "One-stop smart document assistant based on Ernie", tags: ["AI办公", "免费"], tags_en: ["AI Office", "Free"], url: "https://wenku.baidu.com", price: "free" },
+            { id: 52, name: "Otter.ai", category: "office", icon: "", iconBg: "#f59e0b", desc: "AI会议记录和转录", desc_en: "AI meeting recording and transcription", tags: ["AI办公", "免费/付费"], tags_en: ["AI Office", "Free/Paid"], url: "https://otter.ai", price: "freemium" },
+            { id: 53, name: "Notion", category: "office", icon: "", iconBg: "#000", desc: "全能笔记和项目管理工具", desc_en: "All-in-one notes and project management tool", tags: ["AI办公", "免费/付费"], tags_en: ["AI Office", "Free/Paid"], url: "https://notion.so", price: "freemium" },
 
             // 智能体
-            { id: 54, name: "扣子", category: "agent", icon: "🔶", iconBg: "#6366f1", desc: "字节跳动推出的海量AI智能体平台", tags: ["AI智能体", "免费"], url: "https://www.coze.com", price: "free" },
-            { id: 55, name: "Coze", category: "agent", icon: "⚙️", iconBg: "#8b5cf6", desc: "字节跳动推出的海量AI智能体平台", tags: ["AI智能体", "免费"], url: "https://coze.com", price: "free" },
-            { id: 56, name: "讯飞星辰Agent", category: "agent", icon: "⭐", iconBg: "#6355ff", desc: "科大讯飞推出的AI智能体开发平台", tags: ["AI智能体", "免费"], url: "https://xinghuo.xfyun.cn/agent", price: "free" },
-            { id: 57, name: "Manus", category: "agent", icon: "✋", iconBg: "#ec4899", desc: "蝴蝶效应公司推出的首款自主通用AI Agent", tags: ["AI智能体", "免费"], url: "https://manus.im", price: "free" },
-            { id: 58, name: "Dify", category: "agent", icon: "🔵", iconBg: "#22c55e", desc: "开源的生成式AI应用开发平台", tags: ["AI智能体", "免费"], url: "https://dify.ai", price: "free" },
+            { id: 54, name: "扣子", category: "agent", icon: "", iconBg: "#6366f1", desc: "字节跳动推出的海量AI智能体平台", desc_en: "ByteDance's massive AI agent platform", tags: ["AI智能体", "免费"], tags_en: ["AI Agent", "Free"], url: "https://www.coze.com", price: "free" },
+            { id: 55, name: "Coze", category: "agent", icon: "", iconBg: "#8b5cf6", desc: "字节跳动推出的海量AI智能体平台", desc_en: "ByteDance's massive AI agent platform", tags: ["AI智能体", "免费"], tags_en: ["AI Agent", "Free"], url: "https://coze.com", price: "free" },
+            { id: 56, name: "讯飞星辰Agent", category: "agent", icon: "", iconBg: "#6355ff", desc: "科大讯飞推出的AI智能体开发平台", desc_en: "iFlytek's AI agent development platform", tags: ["AI智能体", "免费"], tags_en: ["AI Agent", "Free"], url: "https://xinghuo.xfyun.cn/agent", price: "free" },
+            { id: 57, name: "Manus", category: "agent", icon: "", iconBg: "#ec4899", desc: "蝴蝶效应公司推出的首款自主通用AI Agent", desc_en: "Butterfly Effect's first autonomous general AI Agent", tags: ["AI智能体", "免费"], tags_en: ["AI Agent", "Free"], url: "https://manus.im", price: "free" },
+            { id: 58, name: "Dify", category: "agent", icon: "", iconBg: "#22c55e", desc: "开源的生成式AI应用开发平台", desc_en: "Open-source generative AI app development platform", tags: ["AI智能体", "免费"], tags_en: ["AI Agent", "Free"], url: "https://dify.ai", price: "free" },
 
             // 搜索
-            { id: 59, name: "秘塔AI搜索", category: "search", icon: "🔍", iconBg: "#6366f1", desc: "无广告的AI搜索引擎", tags: ["AI搜索", "免费"], url: "https://metaso.cn", price: "free" },
-            { id: 60, name: "Perplexity", category: "search", icon: "🔮", iconBg: "#6366f1", desc: "AI驱动的搜索工具，答案式搜索", tags: ["AI搜索", "免费/付费"], url: "https://perplexity.ai", price: "freemium" },
-            { id: 61, name: "Komo", category: "search", icon: "🌊", iconBg: "#06b6d4", desc: "快速简洁的AI搜索引擎", tags: ["AI搜索", "免费"], url: "https://komo.ai", price: "free" },
+            { id: 59, name: "秘塔AI搜索", category: "search", icon: "", iconBg: "#6366f1", desc: "无广告的AI搜索引擎", desc_en: "Ad-free AI search engine", tags: ["AI搜索", "免费"], tags_en: ["AI Search", "Free"], url: "https://metaso.cn", price: "free" },
+            { id: 60, name: "Perplexity", category: "search", icon: "", iconBg: "#6366f1", desc: "AI驱动的搜索工具，答案式搜索", desc_en: "AI-powered search tool, answer-based search", tags: ["AI搜索", "免费/付费"], tags_en: ["AI Search", "Free/Paid"], url: "https://perplexity.ai", price: "freemium" },
+            { id: 61, name: "Komo", category: "search", icon: "", iconBg: "#06b6d4", desc: "快速简洁的AI搜索引擎", desc_en: "Fast and simple AI search engine", tags: ["AI搜索", "免费"], tags_en: ["AI Search", "Free"], url: "https://komo.ai", price: "free" },
 
             // AI导航
-            { id: 62, name: "OpenClaw", category: "breed", icon: "🦞", iconBg: "#10b981", desc: "开源个人AI助手，真正能做事", tags: ["AI导航", "开源"], url: "https://openclaw.com", price: "free" },
-            { id: 63, name: "OpenClaw中文网", category: "breed", icon: "🌐", iconBg: "#059669", desc: "OpenClaw中文文档与安装指南", tags: ["AI导航", "教程"], url: "https://www.clawfather.cn", price: "free" },
-            { id: 64, name: "AI工具集", category: "breed", icon: "🛠️", iconBg: "#6366f1", desc: "1000+国内外AI工具导航", tags: ["AI导航", "导航"], url: "https://www.aigc.cn", price: "free" },
-            { id: 65, name: "AI神器大全", category: "breed", icon: "⭐", iconBg: "#f59e0b", desc: "AI工具集合导航站", tags: ["AI导航", "导航"], url: "https://aishenqi.net", price: "free" },
-            { id: 66, name: "终极AI导航", category: "breed", icon: "🎯", iconBg: "#8b5cf6", desc: "国内AI工具导航站", tags: ["AI导航", "导航"], url: "https://ai.zjnav.com", price: "free" },
-            { id: 67, name: "AFT导航", category: "breed", icon: "🚀", iconBg: "#ec4899", desc: "国内外AI工具集合导航", tags: ["AI导航", "导航"], url: "https://www.aftss.net", price: "free" },
-            { id: 68, name: "非猪AI导航", category: "breed", icon: "🐷", iconBg: "#f97316", desc: "最好的AI工具集合网站", tags: ["AI导航", "导航"], url: "https://feizhuke.com", price: "free" },
-            { id: 69, name: "BAI.tools", category: "breed", icon: "🌍", iconBg: "#3b82f6", desc: "国外最佳AI工具目录", tags: ["AI导航", "国外"], url: "https://bai.tools", price: "free" },
-            { id: 70, name: "AIAI.Tools", category: "breed", icon: "🤖", iconBg: "#8b5cf6", desc: "免费AI工具目录", tags: ["AI导航", "国外"], url: "https://aiai.tools", price: "free" },
-            { id: 71, name: "AI Directory", category: "breed", icon: "📂", iconBg: "#6366f1", desc: "终极AI工具目录", tags: ["AI导航", "国外"], url: "https://ai-directory.com", price: "free" },
-            { id: 72, name: "鱼皮AI导航", category: "breed", icon: "🐟", iconBg: "#0ea5e9", desc: "程序员鱼皮创建的AI导航", tags: ["AI导航", "编程"], url: "https://www.code-nav.cn", price: "free" },
+            { id: 62, name: "OpenClaw", category: "breed", icon: "", iconBg: "#10b981", desc: "开源个人AI助手，真正能做事", desc_en: "Open-source personal AI assistant", tags: ["AI导航", "开源"], tags_en: ["AI Directory", "Open Source"], url: "https://openclaw.com", price: "free" },
+            { id: 63, name: "OpenClaw中文网", category: "breed", icon: "", iconBg: "#059669", desc: "OpenClaw中文文档与安装指南", desc_en: "OpenClaw Chinese documentation", tags: ["AI导航", "教程"], tags_en: ["AI Directory", "Tutorial"], url: "https://www.clawfather.cn", price: "free" },
+            { id: 64, name: "AI工具集", category: "breed", icon: "", iconBg: "#6366f1", desc: "1000+国内外AI工具导航", desc_en: "1000+ AI tools navigation", tags: ["AI导航", "导航"], tags_en: ["AI Directory", "Navigation"], url: "https://www.aigc.cn", price: "free" },
+            { id: 65, name: "AI神器大全", category: "breed", icon: "", iconBg: "#f59e0b", desc: "AI工具集合导航站", desc_en: "AI tools collection navigation", tags: ["AI导航", "导航"], tags_en: ["AI Directory", "Navigation"], url: "https://aishenqi.net", price: "free" },
+            { id: 66, name: "终极AI导航", category: "breed", icon: "", iconBg: "#8b5cf6", desc: "国内AI工具导航站", desc_en: "Domestic AI tools navigation", tags: ["AI导航", "导航"], tags_en: ["AI Directory", "Navigation"], url: "https://ai.zjnav.com", price: "free" },
+            { id: 67, name: "AFT导航", category: "breed", icon: "", iconBg: "#ec4899", desc: "国内外AI工具集合导航", desc_en: "Global AI tools collection navigation", tags: ["AI导航", "导航"], tags_en: ["AI Directory", "Navigation"], url: "https://www.aftss.net", price: "free" },
+            { id: 68, name: "非猪AI导航", category: "breed", icon: "", iconBg: "#f97316", desc: "最好的AI工具集合网站", desc_en: "Best AI tools collection website", tags: ["AI导航", "导航"], tags_en: ["AI Directory", "Navigation"], url: "https://feizhuke.com", price: "free" },
+            { id: 69, name: "BAI.tools", category: "breed", icon: "", iconBg: "#3b82f6", desc: "国外最佳AI工具目录", desc_en: "Best foreign AI tools directory", tags: ["AI导航", "国外"], tags_en: ["AI Directory", "Foreign"], url: "https://bai.tools", price: "free" },
+            { id: 70, name: "AIAI.Tools", category: "breed", icon: "", iconBg: "#8b5cf6", desc: "免费AI工具目录", desc_en: "Free AI tools directory", tags: ["AI导航", "国外"], tags_en: ["AI Directory", "Foreign"], url: "https://aiai.tools", price: "free" },
+            { id: 71, name: "AI Directory", category: "breed", icon: "", iconBg: "#6366f1", desc: "终极AI工具目录", desc_en: "Ultimate AI tools directory", tags: ["AI导航", "国外"], tags_en: ["AI Directory", "Foreign"], url: "https://ai-directory.com", price: "free" },
+            { id: 72, name: "鱼皮AI导航", category: "breed", icon: "", iconBg: "#0ea5e9", desc: "程序员鱼皮创建的AI导航", desc_en: "AI navigation by programmer Yupi", tags: ["AI导航", "编程"], tags_en: ["AI Directory", "Coding"], url: "https://www.code-nav.cn", price: "free" },
         ];
 
         // 分类名称映射
         const categoryNames = {
-            chat: "AI对话", writing: "AI写作", image: "AI绘画", video: "AI视频", audio: "AI音频",
-            code: "AI编程", agent: "AI智能体", office: "AI办公", search: "AI搜索", design: "AI设计",
-            dev: "开发平台", marketing: "营销工具", breed: "AI导航"
+            chat: { zh: "AI对话", en: "AI Chat" },
+            writing: { zh: "AI写作", en: "AI Writing" },
+            image: { zh: "AI绘画", en: "AI Image" },
+            video: { zh: "AI视频", en: "AI Video" },
+            audio: { zh: "AI音频", en: "AI Audio" },
+            code: { zh: "AI编程", en: "AI Code" },
+            agent: { zh: "AI智能体", en: "AI Agent" },
+            office: { zh: "AI办公", en: "AI Office" },
+            search: { zh: "AI搜索", en: "AI Search" },
+            design: { zh: "AI设计", en: "AI Design" },
+            dev: { zh: "开发平台", en: "Dev Platform" },
+            marketing: { zh: "营销工具", en: "Marketing" },
+            breed: { zh: "AI导航", en: "AI Directory" }
         };
 
-        // 分类颜色映射
-        const categoryColors = {
-            chat: "#10a37f", writing: "#6366f1", image: "#6b4ce6", video: "#ec4899", audio: "#f59e0b",
-            code: "#6366f1", agent: "#8b5cf6", office: "#22c55e", search: "#06b6d4", design: "#ec4899",
-            dev: "#f97316", marketing: "#f97316", breed: "#10b981"
+        // 价格显示
+        const priceLabels = {
+            free: { zh: "免费", en: "Free" },
+            paid: { zh: "付费", en: "Paid" },
+            freemium: { zh: "免费/付费", en: "Free/Paid" }
         };
+
+        let currentLang = 'zh';
+        let currentTheme = 'dark';
 
         // 渲染工具卡片
         function renderTools(filter = 'all', searchTerm = '') {
@@ -1001,24 +1100,28 @@
                 );
             }
             
+            const isEn = currentLang === 'en';
+            
             grid.innerHTML = filtered.map(tool => `
                 <div class="tool-card" onclick="showToolDetail(${tool.id})">
                     <div class="tool-card-header">
-                        <div class="tool-icon" style="background: ${tool.iconBg}">${tool.icon}</div>
+                        <div class="tool-icon" style="background: ${tool.iconBg}20">
+                            <img src="${getFavicon(tool.url)}" onerror="this.style.display='none'" alt="${tool.name}">
+                        </div>
                         <div class="tool-info">
                             <div class="tool-name">${tool.name}</div>
-                            <span class="tool-category-badge" style="background: ${categoryColors[tool.category]}20; color: ${categoryColors[tool.category]}">
-                                ${categoryNames[tool.category]}
+                            <span class="tool-category-badge" style="background: ${tool.iconBg}20; color: ${tool.iconBg}">
+                                ${categoryNames[tool.category][isEn ? 'en' : 'zh']}
                             </span>
                         </div>
                     </div>
-                    <div class="tool-desc">${tool.desc}</div>
+                    <div class="tool-desc">${isEn && tool.desc_en ? tool.desc_en : tool.desc}</div>
                     <div class="tool-footer">
                         <div class="tool-tags">
-                            ${tool.tags.slice(0,2).map(tag => `<span class="tool-tag">${tag}</span>`).join('')}
+                            ${(isEn ? tool.tags_en : tool.tags).slice(0,2).map(tag => `<span class="tool-tag">${tag}</span>`).join('')}
                         </div>
                         <span class="tool-price ${tool.price === 'free' ? 'price-free' : tool.price === 'paid' ? 'price-paid' : 'price-freemium'}">
-                            ${tool.price === 'free' ? '免费' : tool.price === 'paid' ? '付费' : '免费/付费'}
+                            ${priceLabels[tool.price][isEn ? 'en' : 'zh']}
                         </span>
                     </div>
                 </div>
@@ -1029,12 +1132,17 @@
         function renderHotList() {
             const hotTools = tools.slice(0, 8);
             const hotList = document.getElementById('hotList');
+            const isEn = currentLang === 'en';
+            
             hotList.innerHTML = hotTools.map((tool, index) => `
                 <a href="${tool.url}" target="_blank" class="hot-item">
                     <div class="hot-rank ${index < 3 ? 'rank-' + (index + 1) : 'rank-other'}">${index + 1}</div>
                     <div class="hot-info">
-                        <div class="hot-name">${tool.icon} ${tool.name}</div>
-                        <div class="hot-desc">${tool.desc.slice(0, 20)}...</div>
+                        <div class="hot-name">
+                            <img src="${getFavicon(tool.url)}" onerror="this.style.display='none'" alt="${tool.name}">
+                            ${tool.name}
+                        </div>
+                        <div class="hot-desc">${(isEn && tool.desc_en ? tool.desc_en : tool.desc).slice(0, 20)}...</div>
                     </div>
                 </a>
             `).join('');
@@ -1044,15 +1152,15 @@
         function showToolDetail(id) {
             const tool = tools.find(t => t.id === id);
             if (!tool) return;
+            const isEn = currentLang === 'en';
 
-            document.getElementById('modalIcon').style.background = tool.iconBg;
-            document.getElementById('modalIcon').textContent = tool.icon;
+            document.getElementById('modalIcon').innerHTML = `<img src="${getFavicon(tool.url)}" onerror="this.style.display='none'" alt="${tool.name}">`;
             document.getElementById('modalTitle').textContent = tool.name;
-            document.getElementById('modalBadge').textContent = categoryNames[tool.category];
-            document.getElementById('modalBadge').style.background = categoryColors[tool.category] + '20';
-            document.getElementById('modalBadge').style.color = categoryColors[tool.category];
-            document.getElementById('modalDesc').textContent = tool.desc;
-            document.getElementById('modalTags').innerHTML = tool.tags.map(tag => 
+            document.getElementById('modalBadge').textContent = categoryNames[tool.category][isEn ? 'en' : 'zh'];
+            document.getElementById('modalBadge').style.background = tool.iconBg + '20';
+            document.getElementById('modalBadge').style.color = tool.iconBg;
+            document.getElementById('modalDesc').textContent = isEn && tool.desc_en ? tool.desc_en : tool.desc;
+            document.getElementById('modalTags').innerHTML = (isEn ? tool.tags_en : tool.tags).map(tag => 
                 `<span class="tool-tag">${tag}</span>`
             ).join('');
             document.getElementById('modalBtn').href = tool.url;
@@ -1098,9 +1206,53 @@
             renderTools(activeCategory, e.target.value);
         });
 
+        // 主题切换
+        document.getElementById('themeToggle').addEventListener('click', function() {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            this.textContent = currentTheme === 'dark' ? '🌙' : '☀️';
+            localStorage.setItem('theme', currentTheme);
+        });
+
+        // 语言切换
+        document.getElementById('langToggle').addEventListener('click', function() {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            this.textContent = currentLang === 'zh' ? '中' : 'EN';
+            localStorage.setItem('lang', currentLang);
+            updateLang();
+            renderTools(document.querySelector('.category-tab.active')?.dataset.category || 'all', document.getElementById('searchInput').value);
+            renderHotList();
+        });
+
+        // 更新语言
+        function updateLang() {
+            document.querySelectorAll('[data-lang-zh]').forEach(el => {
+                el.textContent = el.getAttribute(`data-lang-${currentLang}`);
+            });
+            document.querySelectorAll('[data-placeholder-zh]').forEach(el => {
+                el.placeholder = el.getAttribute(`data-placeholder-${currentLang}`);
+            });
+        }
+
         // 初始化
-        renderTools();
-        renderHotList();
+        function init() {
+            // 加载主题
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            currentTheme = savedTheme;
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.getElementById('themeToggle').textContent = savedTheme === 'dark' ? '🌙' : '☀️';
+
+            // 加载语言
+            const savedLang = localStorage.getItem('lang') || 'zh';
+            currentLang = savedLang;
+            document.getElementById('langToggle').textContent = savedLang === 'zh' ? '中' : 'EN';
+            updateLang();
+
+            renderTools();
+            renderHotList();
+        }
+
+        init();
     </script>
 </body>
 </html>
