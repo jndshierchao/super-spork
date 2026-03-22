@@ -610,6 +610,7 @@
             <span class="category-tag" data-category="search">AI搜索</span>
             <span class="category-tag" data-category="design">AI设计</span>
             <span class="category-tag" data-category="dev">开发平台</span>
+            <span class="category-tag" data-category="breed">养殖</span>
         </div>
 
         <div class="tools-grid" id="toolsGrid"></div>
@@ -897,18 +898,27 @@
             { id: 70, name: "HubSpot", category: "marketing", icon: "🔴", iconBg: "#ff7a59", desc: "营销自动化平台，AI辅助", tags: ["营销", "免费/付费"], url: "https://hubspot.com", price: "freemium" },
             { id: 71, name: "SurferSEO", category: "marketing", icon: "🌊", iconBg: "#22c55e", desc: "AI SEO优化工具", tags: ["营销", "付费"], url: "https://surferseo.com", price: "paid" },
             { id: 72, name: "Mailchimp", category: "marketing", icon: "📧", iconBg: "#ffe01b", desc: "邮件营销平台，AI优化内容", tags: ["营销", "免费/付费"], url: "https://mailchimp.com", price: "freemium" },
+            
+            // Breeding / 水产养殖
+            { id: 73, name: "龙虾之家", category: "breed", icon: "🦞", iconBg: "#dc2626", desc: "龙虾养殖技术交流平台", tags: ["养殖", "龙虾"], url: "https://www.longxia.com", price: "free" },
+            { id: 74, name: "中国龙虾网", category: "breed", icon: "🦞", iconBg: "#ea580c", desc: "提供龙虾苗、养殖技术、市场行情", tags: ["养殖", "龙虾"], url: "http://www.cqlx.com", price: "free" },
+            { id: 75, name: "水产123", category: "breed", icon: "🐟", iconBg: "#0891b2", desc: "龙虾养殖知识与技术服务平台", tags: ["养殖", "水产"], url: "https://www.shuichan123.com", price: "free" },
+            { id: 76, name: "稻虾养殖网", category: "breed", icon: "🌾", iconBg: "#65a30d", desc: "稻虾共养技术指南", tags: ["养殖", "稻虾"], url: "https://www.dongya.com", price: "free" },
+            { id: 77, name: "养殖宝", category: "breed", icon: "📱", iconBg: "#7c3aed", desc: "龙虾养殖智能管理APP", tags: ["养殖", "工具"], url: "https://www.yangzhibao.com", price: "free" },
+            { id: 78, name: "新虾农", category: "breed", icon: "👨‍🌾", iconBg: "#16a34a", desc: "新手龙虾养殖入门指南", tags: ["养殖", "教程"], url: "https://www.xinxianong.com", price: "free" },
+            { id: 79, name: "龙虾价格行情网", category: "breed", icon: "📊", iconBg: "#0d9488", desc: "全国龙虾批发市场价格信息", tags: ["养殖", "价格"], url: "https://www.longxiajiage.com", price: "free" },
         ];
 
         const categoryColors = {
             chat: "#10a37f", writing: "#6366f1", image: "#6b4ce6", video: "#ec4899", audio: "#f59e0b",
             code: "#6366f1", agent: "#8b5cf6", office: "#22c55e", search: "#06b6d4", design: "#ec4899",
-            dev: "#f97316", marketing: "#f97316"
+            dev: "#f97316", marketing: "#f97316", breed: "#059669"
         };
 
         const categoryNames = {
             chat: "AI对话", writing: "AI写作", image: "AI绘画", video: "AI视频", audio: "AI音频",
             code: "AI编程", agent: "AI智能体", office: "AI办公", search: "AI搜索", design: "AI设计",
-            dev: "开发平台", marketing: "营销工具"
+            dev: "开发平台", marketing: "营销工具", breed: "水产养殖"
         };
 
         function renderTools(filter = 'all') {
