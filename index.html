@@ -4,1740 +4,189 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI工具集 - 发现最好的AI工具 | 2026最全导航</title>
-    <meta name="description" content="发现最全的AI工具导航网站，涵盖AI写作、AI绘画、AI视频、AI音频、AI编程等领域，100+精选AI工具，包含免费工具推荐、工具评测、使用教程。">
-    <meta name="keywords" content="AI工具,ChatGPT,Midjourney,Sora,AI绘画,AI写作,AI视频,AI工具导航,AI助手,2026 AI工具">
-    <meta name="author" content="jndshierchao">
-    <meta name="robots" content="index, follow">
+    <meta name="description" content="发现最全的AI工具导航网站，涵盖AI写作、AI绘画、AI视频、AI音频、AI编程等领域，170+精选AI工具，包含免费工具推荐。">
+    <meta name="keywords" content="AI工具,ChatGPT,Midjourney,Sora,AI绘画,AI写作,AI视频,AI工具导航,AI助手">
     <link rel="canonical" href="https://jndshierchao.github.io/super-spork/">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="AI工具集 - 发现最好的AI工具 | 2026最全导航">
-    <meta property="og:description" content="100+精选AI工具，涵盖写作、绘画、视频、音频、编程等领域。免费使用教程、工具评测、赚钱攻略。">
+    <meta property="og:title" content="AI工具集 - 发现最好的AI工具">
+    <meta property="og:description" content="170+精选AI工具导航">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://jndshierchao.github.io/super-spork/">
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/6366f1/ffffff?text=AI%E5%B7%A5%E5%85%B7%E9%9B%86">
-    <meta property="og:locale" content="zh_CN">
-    
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AI工具集 - 发现最好的AI工具">
-    <meta name="twitter:description" content="100+精选AI工具导航，涵盖AI写作、绘画、视频、编程等领域">
-    <meta name="twitter:image" content="https://via.placeholder.com/1200x630/6366f1/ffffff?text=AI%E5%B7%A5%E5%85%B7%E9%9B%86">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
-    
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID" crossorigin="anonymous"></script>
-    
-    <!-- Fonts -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
     <style>
-        :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary: #ec4899;
-            --bg: #0f172a;
-            --bg-secondary: #1e293b;
-            --bg-card: #334155;
-            --text: #f8fafc;
-            --text-secondary: #94a3b8;
-            --gradient: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
-            --success: #22c55e;
-            --warning: #f59e0b;
-            --border: rgba(99, 102, 241, 0.2);
-        }
-
-        /* Light Theme */
-        [data-theme="light"] {
-            --bg: #f8fafc;
-            --bg-secondary: #ffffff;
-            --bg-card: #e2e8f0;
-            --text: #1e293b;
-            --text-secondary: #64748b;
-            --border: rgba(0, 0, 0, 0.1);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Noto Sans SC', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        a { text-decoration: none; color: inherit; }
-
-        /* Header */
-        header {
-            background: var(--bg-secondary);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-            transition: background 0.3s;
-        }
-
-        .header-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .logo-icon {
-            width: 32px;
-            height: 32px;
-            background: var(--gradient);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-        }
-
-        nav {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        nav a {
-            color: var(--text-secondary);
-            font-weight: 500;
-            transition: color 0.3s;
-            font-size: 0.95rem;
-        }
-
-        nav a:hover { color: var(--primary); }
-
-        /* Theme Toggle */
-        .theme-toggle {
-            background: var(--bg-card);
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            cursor: pointer;
-            font-size: 1.2rem;
-            transition: all 0.3s;
-        }
-
-        .theme-toggle:hover {
-            transform: scale(1.05);
-        }
-
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text);
-        }
-
-        /* Hero */
-        .hero {
-            padding: 8rem 2rem 4rem;
-            text-align: center;
-            background: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.15) 0%, transparent 50%);
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .hero h1 span {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            color: var(--text-secondary);
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 2rem;
-        }
-
-        .search-box {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .search-box input {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            font-size: 1rem;
-            border: 2px solid var(--bg-card);
-            border-radius: 50px;
-            background: var(--bg-secondary);
-            color: var(--text);
-            outline: none;
-            transition: border-color 0.3s, background 0.3s;
-        }
-
-        .search-box input:focus { border-color: var(--primary); }
-        .search-box input::placeholder { color: var(--text-secondary); }
-
-        /* Stats */
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 4rem;
-            margin: 3rem 0;
-        }
-
-        .stat { text-align: center; }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .stat-label { color: var(--text-secondary); font-size: 0.95rem; }
-
-        /* Quick Links */
-        .quick-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .quick-link {
-            padding: 0.5rem 1.25rem;
-            background: var(--bg-secondary);
-            border-radius: 50px;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            border: 1px solid var(--bg-card);
-            transition: all 0.3s;
-        }
-
-        .quick-link:hover {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-
-        /* Categories */
-        .categories {
-            padding: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .category-tag {
-            padding: 0.6rem 1.5rem;
-            background: var(--bg-card);
-            border-radius: 50px;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: 1px solid transparent;
-            font-size: 0.9rem;
-        }
-
-        .category-tag:hover, .category-tag.active {
-            background: var(--primary);
-            color: white;
-        }
-
-        /* Section */
-        .section {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .section-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .section-link {
-            color: var(--primary);
-            font-size: 0.9rem;
-        }
-
-        /* Tool Cards Grid */
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .tool-card {
-            background: var(--bg-secondary);
-            border-radius: 16px;
-            padding: 1.5rem;
-            border: 1px solid var(--border);
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-
-        .tool-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--primary);
-            box-shadow: 0 20px 40px rgba(99, 102, 241, 0.15);
-        }
-
-        .tool-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .tool-icon {
-            width: 52px;
-            height: 52px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.6rem;
-        }
-
-        .tool-name {
-            font-weight: 600;
-            font-size: 1.15rem;
-        }
-
-        .tool-category {
-            font-size: 0.75rem;
-            padding: 0.25rem 0.75rem;
-            border-radius: 50px;
-            display: inline-block;
-        }
-
-        .tool-desc {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-            line-height: 1.5;
-        }
-
-        .tool-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .tool-tags {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .tool-tag {
-            font-size: 0.75rem;
-            padding: 0.25rem 0.5rem;
-            border-radius: 4px;
-        }
-
-        .tool-price {
-            font-size: 0.8rem;
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-        }
-
-        .price-free { background: rgba(34, 197, 94, 0.2); color: var(--success); }
-        .price-paid { background: rgba(236, 72, 153, 0.2); color: var(--secondary); }
-        .price-freemium { background: rgba(99, 102, 241, 0.2); color: var(--primary); }
-
-        /* Featured Tools */
-        .featured-section {
-            background: var(--bg-secondary);
-            padding: 4rem 2rem;
-            margin-top: 3rem;
-        }
-
-        .featured-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .featured-card {
-            background: var(--bg-card);
-            border-radius: 20px;
-            padding: 2rem;
-            border: 2px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .featured-card:hover {
-            border-color: var(--primary);
-        }
-
-        .featured-badge {
-            display: inline-block;
-            background: var(--gradient);
-            color: white;
-            padding: 0.3rem 1rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Articles Section */
-        .articles-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .article-card {
-            background: var(--bg-secondary);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            transition: all 0.3s;
-        }
-
-        .article-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--primary);
-        }
-
-        .article-image {
-            height: 180px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-        }
-
-        .article-content {
-            padding: 1.5rem;
-        }
-
-        .article-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-            line-height: 1.4;
-        }
-
-        .article-desc {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .article-meta {
-            display: flex;
-            gap: 1rem;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-        }
-
-        /* News Section */
-        .news-section {
-            background: var(--bg-secondary);
-            padding: 4rem 2rem;
-            margin-top: 3rem;
-        }
-
-        .news-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .news-card {
-            background: var(--bg-card);
-            border-radius: 12px;
-            padding: 1.5rem;
-            transition: all 0.3s;
-        }
-
-        .news-card:hover {
-            transform: translateX(4px);
-        }
-
-        .news-date {
-            font-size: 0.8rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .news-title {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .news-desc {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-
-        /* Newsletter Section */
-        .newsletter-section {
-            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(236, 72, 153, 0.2) 100%);
-            padding: 4rem 2rem;
-            margin-top: 3rem;
-            text-align: center;
-        }
-
-        .newsletter-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .newsletter-form {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .newsletter-input {
-            flex: 1;
-            min-width: 250px;
-            padding: 1rem 1.5rem;
-            border: none;
-            border-radius: 50px;
-            background: var(--bg-secondary);
-            color: var(--text);
-            font-size: 1rem;
-            outline: none;
-        }
-
-        .newsletter-btn {
-            padding: 1rem 2rem;
-            background: var(--gradient);
-            border: none;
-            border-radius: 50px;
-            color: white;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
-
-        .newsletter-btn:hover {
-            transform: scale(1.05);
-        }
-
-        /* Mini Tools */
-        .mini-tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .mini-tool-card {
-            background: var(--bg-card);
-            border-radius: 12px;
-            padding: 1.75rem;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s;
-            border: 1px solid transparent;
-        }
-
-        .mini-tool-card:hover {
-            background: var(--primary);
-            transform: scale(1.02);
-        }
-
-        .mini-tool-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .mini-tool-name {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .mini-tool-desc {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-        }
-
-        .mini-tool-card:hover .mini-tool-desc {
-            color: rgba(255,255,255,0.8);
-        }
-
-        /* Comparison Table */
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            background: var(--bg-secondary);
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .comparison-table th,
-        .comparison-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .comparison-table th {
-            background: var(--bg-card);
-            font-weight: 600;
-        }
-
-        .comparison-table tr:hover td {
-            background: rgba(99, 102, 241, 0.1);
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 200;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-        }
-
-        .modal.active { display: flex; }
-
-        .modal-content {
-            background: var(--bg-secondary);
-            border-radius: 20px;
-            max-width: 700px;
-            width: 100%;
-            max-height: 85vh;
-            overflow-y: auto;
-            padding: 2rem;
-            position: relative;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--bg-secondary);
-            padding: 4rem 2rem;
-            text-align: center;
-            margin-top: 4rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .footer-links a:hover { color: var(--primary); }
-
-        /* CTA Button */
-        .cta-button {
-            display: inline-block;
-            background: var(--gradient);
-            color: white;
-            padding: 0.75rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: transform 0.3s;
-        }
-
-        .cta-button:hover { transform: scale(1.05); }
-
-        /* Back to Top */
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 50px;
-            height: 50px;
-            background: var(--gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s;
-            border: none;
-            z-index: 50;
-        }
-
-        .back-to-top.show {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* Loading Animation */
-        .loading {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-            border: 3px solid var(--text-secondary);
-            border-radius: 50%;
-            border-top-color: var(--primary);
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            nav { display: none; }
-            .mobile-menu-btn { display: block; }
-            .stats { gap: 2rem; flex-wrap: wrap; }
-            .tools-grid { grid-template-columns: 1fr; }
-            .newsletter-form { flex-direction: column; }
-            .newsletter-input, .newsletter-btn { width: 100%; }
-        }
-
-        /* Tab navigation */
-        .tab-nav {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 1rem;
-        }
-
-        .tab-btn {
-            padding: 0.5rem 1.5rem;
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            cursor: pointer;
-            font-size: 1rem;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-
-        .tab-btn.active {
-            background: var(--primary);
-            color: white;
-        }
-
-        /* Animations */
-        .fade-in {
-            animation: fadeIn 0.5s ease-in;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Toast Notification */
-        .toast {
-            position: fixed;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%) translateY(100px);
-            background: var(--bg-card);
-            color: var(--text);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            z-index: 300;
-            transition: transform 0.3s;
-        }
-
-        .toast.show {
-            transform: translateX(-50%) translateY(0);
-        }
+        :root{--primary:#6366f1;--primary-dark:#4f46e5;--secondary:#ec4899;--bg:#0f172a;--bg-secondary:#1e293b;--bg-card:#334155;--text:#f8fafc;--text-secondary:#94a3b8;--gradient:linear-gradient(135deg,#6366f1 0%,#ec4899 100%);--success:#22c55e;--warning:#f59e0b;--border:rgba(99,102,241,0.2)}
+        [data-theme="light"]{--bg:#f8fafc;--bg-secondary:#ffffff;--bg-card:#e2e8f0;--text:#1e293b;--text-secondary:#64748b;--border:rgba(0,0,0,0.1)}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Noto Sans SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background .3s,color .3s}
+        a{text-decoration:none;color:inherit}
+        header{background:var(--bg-secondary);border-bottom:1px solid var(--border);position:fixed;width:100%;top:0;z-index:100;backdrop-filter:blur(10px)}
+        .header-content{max-width:1400px;margin:0 auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+        .logo{font-size:1.5rem;font-weight:700;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .nav{display:flex;gap:1.5rem;align-items:center}
+        .nav a{color:var(--text-secondary);transition:color .3s}
+        .nav a:hover{color:var(--primary)}
+        .theme-toggle{background:var(--bg-card);border:none;color:var(--text);padding:.5rem;border-radius:8px;cursor:pointer;font-size:1.2rem}
+        .search-box{background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:.75rem 1.5rem;width:300px;color:var(--text);transition:border-color .3s}
+        .search-box:focus{outline:none;border-color:var(--primary)}
+        main{max-width:1400px;margin:0 auto;padding:6rem 2rem 2rem}
+        .hero{text-align:center;padding:3rem 0}
+        .hero h1{font-size:3rem;margin-bottom:1rem}
+        .hero p{color:var(--text-secondary);font-size:1.2rem;max-width:600px;margin:0 auto}
+        .stats{display:flex;justify-content:center;gap:3rem;margin-top:2rem}
+        .stat{text-align:center}
+        .stat-num{font-size:2rem;font-weight:700;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .stat-label{color:var(--text-secondary)}
+        .categories{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;margin:2rem 0}
+        .category-btn{background:var(--bg-card);border:1px solid var(--border);padding:.5rem 1.25rem;border-radius:20px;cursor:pointer;color:var(--text);transition:all .3s;font-size:.9rem}
+        .category-btn:hover,.category-btn.active{background:var(--primary);border-color:var(--primary)}
+        .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;margin-top:2rem}
+        .tool-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:16px;padding:1.5rem;transition:all .3s}
+        .tool-card:hover{transform:translateY(-4px);border-color:var(--primary);box-shadow:0 10px 40px rgba(99,102,241,0.2)}
+        .tool-icon{font-size:2.5rem;margin-bottom:1rem}
+        .tool-name{font-size:1.1rem;font-weight:600;margin-bottom:.5rem}
+        .tool-desc{color:var(--text-secondary);font-size:.85rem;margin-bottom:.75rem;line-height:1.5}
+        .tool-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+        .tag{background:var(--bg-card);padding:.25rem .75rem;border-radius:12px;font-size:.75rem;color:var(--text-secondary)}
+        .tag.hot{background:linear-gradient(135deg,#ef4444,#f97316);color:#fff}
+        .tool-link{display:inline-block;background:var(--primary);color:#fff;padding:.5rem 1.25rem;border-radius:8px;font-size:.9rem;transition:background .3s}
+        .tool-link:hover{background:var(--primary-dark)}
+        .news-section{margin-top:4rem;padding:2rem;background:var(--bg-secondary);border-radius:16px}
+        .news-title{font-size:1.5rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.5rem}
+        .news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+        .news-card{background:var(--bg-card);padding:1.5rem;border-radius:12px}
+        .news-date{color:var(--primary);font-size:.85rem;margin-bottom:.5rem}
+        .news-title-text{font-weight:600;margin-bottom:.5rem}
+        .news-summary{color:var(--text-secondary);font-size:.9rem}
+        .back-to-top{position:fixed;bottom:2rem;right:2rem;background:var(--primary);color:#fff;width:50px;height:50px;border-radius:50%;border:none;cursor:pointer;opacity:0;transition:opacity .3s;font-size:1.5rem;display:flex;align-items:center;justify-content:center}
+        .back-to-top.show{opacity:1}
+        footer{background:var(--bg-secondary);padding:2rem;text-align:center;margin-top:4rem;border-top:1px solid var(--border)}
+        footer p{color:var(--text-secondary)}
+        .loading{text-align:center;padding:2rem;color:var(--text-secondary)}
+        @media(max-width:768px){.header-content{flex-wrap:wrap;gap:1rem}.search-box{width:100%}.hero h1{font-size:2rem}.stats{flex-wrap:wrap;gap:1.5rem}.tools-grid{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="header-content">
-            <div class="logo">
-                <div class="logo-icon">🤖</div>
-                AI工具集
-            </div>
-            <nav>
-                <a href="#home">首页</a>
-                <a href="#tools">工具大全</a>
-                <a href="#articles">教程</a>
+            <a href="/" class="logo">🤖 AI工具集</a>
+            <nav class="nav">
+                <a href="#tools">工具</a>
                 <a href="#news">资讯</a>
-                <a href="#mini-tools">小工具</a>
-                <a href="#about">关于</a>
+                <a href="privacy.html">隐私政策</a>
             </nav>
-            <button class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题">🌙</button>
-            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <input type="text" class="search-box" placeholder="🔍 搜索AI工具..." id="searchInput">
+            <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">🌙</button>
         </div>
     </header>
-
-    <!-- Hero -->
-    <section class="hero" id="home">
-        <h1>发现最好的 <span>AI 工具</span></h1>
-        <p>收录100+款AI工具，涵盖AI写作、绘画、视频、音频、编程等领域。免费使用教程、工具评测、赚钱攻略。</p>
-        
-        <div class="search-box">
-            <input type="text" id="searchInput" placeholder="搜索AI工具、功能、用途...">
-        </div>
-        
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-number" id="toolCount">150+</div>
-                <div class="stat-label">AI工具</div>
+    <main>
+        <section class="hero">
+            <h1>发现最好的AI工具 🤖</h1>
+            <p>收录全球170+优质AI工具，覆盖写作、绘画、视频、编程等全场景，让AI助你提升效率</p>
+            <div class="stats">
+                <div class="stat"><div class="stat-num" id="toolCount">170+</div><div class="stat-label">精选工具</div></div>
+                <div class="stat"><div class="stat-num">12</div><div class="stat-label">分类覆盖</div></div>
+                <div class="stat"><div class="stat-num">100%</div><div class="stat-label">免费推荐</div></div>
             </div>
-            <div class="stat">
-                <div class="stat-number">15</div>
-                <div class="stat-label">分类</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">50K+</div>
-                <div class="stat-label">月访问</div>
-            </div>
+        </section>
+        <div class="categories" id="categories">
+            <button class="category-btn active" data-category="all">全部</button>
+            <button class="category-btn" data-category="chatbot">💬 AI聊天</button>
+            <button class="category-btn" data-category="image">🎨 AI图像</button>
+            <button class="category-btn" data-category="video">🎬 AI视频</button>
+            <button class="category-btn" data-category="audio">🎵 AI音频</button>
+            <button class="category-btn" data-category="programming">💻 AI编程</button>
+            <button class="category-btn" data-category="writing">✍️ AI写作</button>
+            <button class="category-btn" data-category="office">📊 AI办公</button>
+            <button class="category-btn" data-category="agent">🤖 AI智能体</button>
+            <button class="category-btn" data-category="search">🔍 AI搜索</button>
+            <button class="category-btn" data-category="design">🎯 AI设计</button>
+            <button class="category-btn" data-category="other">📦 其他</button>
         </div>
-
-        <div class="quick-links">
-            <a href="#tools" class="quick-link">🔥 热门</a>
-            <a href="#tools" class="quick-link">🆕 新品</a>
-            <a href="#tools" class="quick-link">💰 免费</a>
-            <a href="#tools" class="quick-link">📝 写作</a>
-            <a href="#tools" class="quick-link">🎨 绘画</a>
-            <a href="#tools" class="quick-link">🎬 视频</a>
+        <div class="tools-grid" id="toolsGrid">
+            <div class="loading">加载中...</div>
         </div>
-    </section>
-
-    <!-- Categories -->
-    <div class="categories">
-        <div class="category-tag active" data-category="all">全部</div>
-        <div class="category-tag" data-category="writing">AI写作</div>
-        <div class="category-tag" data-category="image">AI绘画</div>
-        <div class="category-tag" data-category="video">AI视频</div>
-        <div class="category-tag" data-category="audio">AI音频</div>
-        <div class="category-tag" data-category="code">AI编程</div>
-        <div class="category-tag" data-category="productivity">效率工具</div>
-        <div class="category-tag" data-category="marketing">营销工具</div>
-        <div class="category-tag" data-category="design">设计工具</div>
-        <div class="category-tag" data-category="3d">3D工具</div>
-        <div class="category-tag" data-category="search">AI搜索</div>
-    </div>
-
-    <!-- Featured Section -->
-    <section class="featured-section">
-        <div class="featured-grid">
-            <div class="featured-card">
-                <span class="featured-badge">🏆 强烈推荐</span>
-                <h3 style="margin-bottom: 1rem; font-size: 1.3rem;">ChatGPT - AI对话鼻祖</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 1rem;">OpenAI开发的AI对话工具，支持写作、编程、问答等多种场景。目前最强通用AI助手。</p>
-                <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
-                    <span class="tool-tag" style="background: rgba(16, 163, 127, 0.2); color: #10a37f;">AI对话</span>
-                    <span class="tool-tag" style="background: rgba(34, 197, 94, 0.2); color: var(--success);">免费使用</span>
+        <section class="news-section" id="news">
+            <h2 class="news-title">📰 AI资讯速递</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-date">2026-04-09</div>
+                    <div class="news-title-text">OpenAI发布GPT-5，性能全面超越GPT-4</div>
+                    <div class="news-summary">GPT-5在推理、多模态、长上下文等方面实现质的飞跃，支持128K上下文窗口。</div>
                 </div>
-                <a href="https://chat.openai.com" target="_blank" rel="noopener" class="cta-button">免费体验 →</a>
-            </div>
-            <div class="featured-card">
-                <span class="featured-badge">🎨 AI绘画</span>
-                <h3 style="margin-bottom: 1rem; font-size: 1.3rem;">Midjourney - 最强AI绘画</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 1rem;">通过文字描述生成精美图片，艺术家和设计师的首选工具。</p>
-                <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
-                    <span class="tool-tag" style="background: rgba(236, 72, 153, 0.2); color: var(--secondary);">AI绘画</span>
-                    <span class="tool-tag" style="background: rgba(236, 72, 153, 0.2); color: var(--secondary);">付费</span>
+                <div class="news-card">
+                    <div class="news-date">2026-04-08</div>
+                    <div class="news-title-text">Anthropic推出Claude 3.5 Opus</div>
+                    <div class="news-summary">Claude 3.5 Opus在编程、推理任务上大幅提升，新增200K上下文支持。</div>
                 </div>
-                <a href="https://midjourney.com" target="_blank" rel="noopener" class="cta-button">开始创作 →</a>
-            </div>
-            <div class="featured-card">
-                <span class="featured-badge">⚡ 编程神器</span>
-                <h3 style="margin-bottom: 1rem; font-size: 1.3rem;">Cursor - AI代码编辑器</h3>
-                <p style="color: var(--text-secondary); margin-bottom: 1rem;">基于VS Code的AI编程助手，代码补全、生成、调试一站式解决。</p>
-                <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
-                    <span class="tool-tag" style="background: rgba(99, 102, 241, 0.2); color: var(--primary);">AI编程</span>
-                    <span class="tool-tag" style="background: rgba(34, 197, 94, 0.2); color: var(--success);">免费使用</span>
-                </div>
-                <a href="https://cursor.sh" target="_blank" rel="noopener" class="cta-button">免费体验 →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tools Grid -->
-    <section class="section" id="tools">
-        <div class="section-header">
-            <div class="section-title">🔥 热门AI工具</div>
-            <a href="#" class="section-link" onclick="loadMoreTools(); return false;">查看更多 →</a>
-        </div>
-        <div class="tools-grid" id="toolsGrid"></div>
-        <div style="text-align: center; margin-top: 2rem;">
-            <button class="cta-button" onclick="loadMoreTools()">加载更多</button>
-        </div>
-    </section>
-
-    <!-- Articles Section -->
-    <section class="section" id="articles">
-        <div class="section-title">📚 教程与评测</div>
-        <div class="articles-grid">
-            <div class="article-card">
-                <div class="article-image">📝</div>
-                <div class="article-content">
-                    <h3 class="article-title">ChatGPT使用完全指南：从注册到高级应用</h3>
-                    <p class="article-desc">详细介绍ChatGPT的注册使用方法、提示词技巧、实际应用场景。</p>
-                    <div class="article-meta">
-                        <span>🕐 2026-04-08</span>
-                        <span>👁️ 15K+ 阅读</span>
-                    </div>
+                <div class="news-card">
+                    <div class="news-date">2026-04-07</div>
+                    <div class="news-title-text">Google发布Gemini 2.0 Ultra</div>
+                    <div class="news-summary">Gemini 2.0 Ultra在MMLU、代码生成等基准测试中刷新SOTA记录。</div>
                 </div>
             </div>
-            <div class="article-card">
-                <div class="article-image">🎨</div>
-                <div class="article-content">
-                    <h3 class="article-title">Midjourney vs Stable Diffusion 全面对比</h3>
-                    <p class="article-desc">两大AI绘画工具全方位对比，哪个更适合你？</p>
-                    <div class="article-meta">
-                        <span>🕐 2026-04-05</span>
-                        <span>👁️ 12K+ 阅读</span>
-                    </div>
-                </div>
-            </div>
-            <div class="article-card">
-                <div class="article-image">💰</div>
-                <div class="article-content">
-                    <h3 class="article-title">如何用AI工具月入过万？真实案例分享</h3>
-                    <p class="article-desc">分享5个利用AI工具赚钱的真实案例，包含具体操作方法。</p>
-                    <div class="article-meta">
-                        <span>🕐 2026-04-01</span>
-                        <span>👁️ 30K+ 阅读</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter -->
-    <section class="newsletter-section">
-        <div class="newsletter-content">
-            <h2 style="font-size: 2rem; margin-bottom: 1rem;">📬 订阅更新</h2>
-            <p style="color: var(--text-secondary);">订阅我们，第一时间获取最新AI工具资讯和使用技巧</p>
-            <form class="newsletter-form" onsubmit="subscribeNewsletter(event)">
-                <input type="email" class="newsletter-input" placeholder="输入你的邮箱地址" required>
-                <button type="submit" class="newsletter-btn">立即订阅</button>
-            </form>
-            <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 1rem;">我们尊重您的隐私，不会向第三方分享您的邮箱</p>
-        </div>
-    </section>
-
-    <!-- News Section -->
-    <section class="news-section" id="news">
-        <div class="section-title" style="max-width: 1400px; margin: 0 auto 1.5rem;">📰 AI资讯</div>
-        <div class="news-grid">
-            <div class="news-card">
-                <div class="news-date">2026-04-08</div>
-                <h4 class="news-title">GPT-5 正式发布，推理能力提升10倍</h4>
-                <p class="news-desc">OpenAI发布新一代GPT模型，在复杂推理和多模态理解上有重大突破...</p>
-            </div>
-            <div class="news-card">
-                <div class="news-date">2026-04-06</div>
-                <h4 class="news-title">Claude 3.5 更新：支持100万Token上下文</h4>
-                <p class="news-desc">Anthropic大幅提升Claude上下文窗口，可处理整本书籍和代码库...</p>
-            </div>
-            <div class="news-card">
-                <div class="news-date">2026-04-04</div>
-                <h4 class="news-title">Sora 开放API，企业可集成使用</h4>
-                <p class="news-desc">文本生成视频不再是难题，开发者可以低成本接入...</p>
-            </div>
-            <div class="news-card">
-                <div class="news-date">2026-04-02</div>
-                <h4 class="news-title">GitHub Copilot X 全面升级</h4>
-                <p class="news-desc">AI编程助手再升级，支持更多语言和框架...</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mini Tools -->
-    <section class="section" id="mini-tools">
-        <div class="section-title">🛠️ 在线小工具</div>
-        <div class="mini-tools-grid">
-            <div class="mini-tool-card" onclick="openTool('json')">
-                <div class="mini-tool-icon">📄</div>
-                <div class="mini-tool-name">JSON 格式化</div>
-                <div class="mini-tool-desc">在线JSON格式化、压缩、校验</div>
-            </div>
-            <div class="mini-tool-card" onclick="openTool('color')">
-                <div class="mini-tool-icon">🎨</div>
-                <div class="mini-tool-name">颜色提取器</div>
-                <div class="mini-tool-desc">提取图片中的颜色值</div>
-            </div>
-            <div class="mini-tool-card" onclick="openTool('base64')">
-                <div class="mini-tool-icon">🔤</div>
-                <div class="mini-tool-name">Base64 编码</div>
-                <div class="mini-tool-desc">字符串Base64编码解码</div>
-            </div>
-            <div class="mini-tool-card" onclick="openTool('timestamp')">
-                <div class="mini-tool-icon">⏰</div>
-                <div class="mini-tool-name">时间戳转换</div>
-                <div class="mini-tool-desc">Unix时间戳互转</div>
-            </div>
-            <div class="mini-tool-card" onclick="openTool('qrcode')">
-                <div class="mini-tool-icon">📱</div>
-                <div class="mini-tool-name">二维码生成</div>
-                <div class="mini-tool-desc">在线生成二维码</div>
-            </div>
-            <div class="mini-tool-card" onclick="openTool('url')">
-                <div class="mini-tool-icon">🔗</div>
-                <div class="mini-tool-name">URL编码</div>
-                <div class="mini-tool-desc">URL编码解码工具</div>
-            </div>
-            <div class="mini-tool-card" onclick="openTool('hash')">
-                <div class="mini-tool-icon">🔐</div>
-                <div class="mini-tool-name">MD5加密</div>
-                <div class="mini-tool-desc">字符串MD5加密</div>
-            </div>
-            <div class="mini-tool-card" onclick="openTool('wordcount')">
-                <div class="mini-tool-icon">📊</div>
-                <div class="mini-tool-name">字数统计</div>
-                <div class="mini-tool-desc">统计文本字数行数</div>
-            </div>
-            <div class="mini-tool-card" onclick="openTool('regex')">
-                <div class="mini-tool-icon">🔍</div>
-                <div class="mini-tool-name">正则测试</div>
-                <div class="mini-tool-desc">正则表达式测试工具</div>
-            </div>
-            <div class="mini-tool-card" onclick="openTool('image')">
-                <div class="mini-tool-icon">🖼️</div>
-                <div class="mini-tool-name">图片优化</div>
-                <div class="mini-tool-desc">在线压缩和转换图片</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ad Banner -->
-    <div style="max-width: 1200px; margin: 0 auto; padding: 2rem;">
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-YOUR_PUBLISHER_ID" data-ad-slot="YOUR_AD_SLOT" data-ad-format="auto" data-full-width-responsive="true"></ins>
-    </div>
-
-    <!-- Footer -->
-    <footer id="about">
-        <div class="footer-content">
-            <div class="logo" style="justify-content: center; margin-bottom: 1rem;">
-                <div class="logo-icon">🤖</div>
-                AI工具集
-            </div>
-            <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto;">
-                发现最好的AI工具，让AI帮助你提升工作效率，创造更多价值。
-            </p>
-            <div class="footer-links">
-                <a href="#home">首页</a>
-                <a href="#tools">工具大全</a>
-                <a href="#articles">教程</a>
-                <a href="#news">资讯</a>
-                <a href="#about">关于我们</a>
-                <a href="/sitemap.xml">网站地图</a>
-            </div>
-            <p style="color: var(--text-secondary); font-size: 0.85rem;">
-                本网站包含推广链接，点击注册可能会获得佣金支持
-            </p>
-            <p style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 1rem;">
-                © 2026 AI工具集 All Rights Reserved | 
-                <a href="/privacy.html" style="color: var(--primary);">隐私政策</a>
-            </p>
-        </div>
+        </section>
+    </main>
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
+    <footer>
+        <p>© 2026 AI工具集 | 仅供学习交流，如有问题请联系删除</p>
     </footer>
-
-    <!-- Modal -->
-    <div class="modal" id="toolModal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">×</button>
-            <div id="modalBody"></div>
-        </div>
-    </div>
-
-    <!-- Back to Top -->
-    <button class="back-to-top" onclick="scrollToTop()">↑</button>
-
-    <!-- Toast -->
-    <div class="toast" id="toast"></div>
-
     <script>
-        // Extended Tool Data - 2026 AI Tools
-        const tools = [
-            // AI Writing (AI写作)
-            { id: 1, name: "ChatGPT", category: "writing", icon: "💬", iconBg: "#10a37f", desc: "OpenAI开发的AI对话工具，支持写作、编程、问答等多种场景", tags: ["AI对话", "免费/付费"], url: "https://chat.openai.com", price: "freemium", isNew: false },
-            { id: 2, name: "Claude 3.5", category: "writing", icon: "🧠", iconBg: "#d97757", desc: "Anthropic开发的AI助手，擅长长文写作和深度分析，支持100万Token上下文", tags: ["AI对话", "免费/付费"], url: "https://claude.ai", price: "freemium", isNew: true },
-            { id: 3, name: "Jasper", category: "writing", icon: "✍️", iconBg: "#22c55e", desc: "AI营销内容生成工具，适合营销人员", tags: ["AI写作", "付费"], url: "https://jasper.ai", price: "paid" },
-            { id: 4, name: "Notion AI", category: "writing", icon: "📝", iconBg: "#000", desc: "笔记工具的AI助手，帮助写作和整理信息", tags: ["AI写作", "付费"], url: "https://notion.so/product/ai", price: "paid" },
-            { id: 5, name: "Copy.ai", category: "writing", icon: "📋", iconBg: "#7c3aed", desc: "AI文案生成工具，营销文案神器", tags: ["AI写作", "免费/付费"], url: "https://copy.ai", price: "freemium" },
-            { id: 6, name: "Writesonic", category: "writing", icon: "🖊️", iconBg: "#3b82f6", desc: "AI写作平台，SEO内容优化", tags: ["AI写作", "付费"], url: "https://writesonic.com", price: "paid" },
-            { id: 7, name: "Gemini", category: "writing", icon: "🌟", iconBg: "#4285f4", desc: "Google AI助手，支持多模态理解和超长上下文", tags: ["AI对话", "免费"], url: "https://gemini.google.com", price: "free", isNew: true },
-            { id: 8, name: "Perplexity", category: "search", icon: "🔮", iconBg: "#20B2AA", desc: "AI驱动的搜索引擎，实时获取最新信息", tags: ["AI搜索", "免费"], url: "https://perplexity.ai", price: "freemium", isNew: true },
-            { id: 9, name: "Grok", category: "writing", icon: "🤖", iconBg: "#000", desc: "xAI开发的AI助手，具有实时信息获取能力", tags: ["AI对话", "付费"], url: "https://grok.x.ai", price: "paid", isNew: true },
-            
-            // AI Image (AI绘画)
-            { id: 10, name: "Midjourney V7", category: "image", icon: "🎨", iconBg: "#fff", desc: "最强AI绘画工具，通过文字描述生成精美图片", tags: ["AI绘画", "付费"], url: "https://midjourney.com", price: "paid" },
-            { id: 11, name: "Stable Diffusion 3", category: "image", icon: "🖼️", iconBg: "#6b4ce6", desc: "开源AI绘画模型，可本地部署使用", tags: ["AI绘画", "免费"], url: "https://stability.ai", price: "free" },
-            { id: 12, name: "DALL-E 3", category: "image", icon: "🎭", iconBg: "#10a37f", desc: "OpenAI图像生成模型，创意无限", tags: ["AI绘画", "付费"], url: "https://openai.com/dall-e-3", price: "paid" },
-            { id: 13, name: "Leonardo.ai", category: "image", icon: "🦁", iconBg: "#f59e0b", desc: "AI绘画平台，社区活跃，模型丰富", tags: ["AI绘画", "免费/付费"], url: "https://leonardo.ai", price: "freemium" },
-            { id: 14, name: "Adobe Firefly 3", category: "image", icon: "🔥", iconBg: "#ff0000", desc: "Adobe AI绘画工具，无版权风险", tags: ["AI绘画", "付费"], url: "https://firefly.adobe.com", price: "paid" },
-            { id: 15, name: "Ideogram 2", category: "image", icon: "💭", iconBg: "#9333ea", desc: "AI图像生成，擅长文字渲染和Logo设计", tags: ["AI绘画", "免费/付费"], url: "https://ideogram.ai", price: "freemium", isNew: true },
-            { id: 16, name: "Flux AI", category: "image", icon: "⚡", iconBg: "#000", desc: "BlackForest Labs推出的开源AI图像生成模型", tags: ["AI绘画", "免费"], url: "https://flux.ai", price: "free", isNew: true },
-            
-            // AI Video (AI视频)
-            { id: 17, name: "Runway Gen-3", category: "video", icon: "🎬", iconBg: "#000", desc: "AI视频生成和编辑平台，支持文字生成视频", tags: ["AI视频", "付费"], url: "https://runwayml.com", price: "paid" },
-            { id: 18, name: "Pika 2.0", category: "video", icon: "🎥", iconBg: "#8b5cf6", desc: "AI视频生成工具，新手友好", tags: ["AI视频", "免费/付费"], url: "https://pika.art", price: "freemium", isNew: true },
-            { id: 19, name: "Sora", category: "video", icon: "🌊", iconBg: "#10a37f", desc: "OpenAI文字转视频工具，效果惊艳", tags: ["AI视频", "付费"], url: "https://openai.com/sora", price: "paid" },
-            { id: 20, name: "Kling AI", category: "video", icon: "🌀", iconBg: "#6366f1", desc: "快手AI视频生成，支持高质量视频创作", tags: ["AI视频", "免费/付费"], url: "https://klingai.com", price: "freemium", isNew: true },
-            { id: 21, name: "Hailuo AI", category: "video", icon: "🎆", iconBg: "#ec4899", desc: "MiniMax推出的AI视频生成工具", tags: ["AI视频", "免费"], url: "https://hailuoai.video", price: "freemium", isNew: true },
-            { id: 22, name: "HeyGen", category: "video", icon: "👤", iconBg: "#ec4899", desc: "AI数字人视频生成", tags: ["AI视频", "付费"], url: "https://heygen.com", price: "paid" },
-            { id: 23, name: "Luma Dream Machine", category: "video", icon: "✨", iconBg: "#f59e0b", desc: "AI视频生成，支持高质量3D场景", tags: ["AI视频", "免费/付费"], url: "https://lumalabs.ai", price: "freemium", isNew: true },
-            
-            // AI Audio (AI音频)
-            { id: 24, name: "ElevenLabs", category: "audio", icon: "🎙️", iconBg: "#000", desc: "AI语音合成，生成自然的人声", tags: ["AI音频", "免费/付费"], url: "https://elevenlabs.io", price: "freemium" },
-            { id: 25, name: "Murf AI", category: "audio", icon: "🎵", iconBg: "#ec4899", desc: "AI语音生成器，提供多种声音选择", tags: ["AI音频", "付费"], url: "https://murf.ai", price: "paid" },
-            { id: 26, name: "Adobe Podcast", category: "audio", icon: "🎚️", iconBg: "#ff0000", desc: "AI音频增强，去除噪音", tags: ["AI音频", "免费"], url: "https://podcast.adobe.com", price: "free" },
-            { id: 27, name: "Suno V4", category: "audio", icon: "🎶", iconBg: "#22c55e", desc: "AI音乐生成，输入文字创作歌曲", tags: ["AI音乐", "免费/付费"], url: "https://suno.ai", price: "freemium", isNew: true },
-            { id: 28, name: "Udio", category: "audio", icon: "🎧", iconBg: "#6366f1", desc: "AI音乐创作平台，支持多种音乐风格", tags: ["AI音乐", "免费/付费"], url: "https://udio.com", price: "freemium", isNew: true },
-            
-            // AI Code (AI编程)
-            { id: 29, name: "GitHub Copilot X", category: "code", icon: "👨‍💻", iconBg: "#1a1a1a", desc: "AI编程助手，提供代码补全和生成功能", tags: ["AI编程", "付费"], url: "https://github.com/features/copilot", price: "paid" },
-            { id: 30, name: "Cursor Pro", category: "code", icon: "⚡", iconBg: "#6366f1", desc: "AI代码编辑器，基于VS Code定制", tags: ["AI编程", "免费/付费"], url: "https://cursor.sh", price: "freemium" },
-            { id: 31, name: "Amazon CodeWhisperer", category: "code", icon: "🔧", iconBg: "#ff9900", desc: "亚马逊AI编程助手，免费使用", tags: ["AI编程", "免费"], url: "https://aws.amazon.com/codewhisperer", price: "free" },
-            { id: 32, name: "Tabnine Pro", category: "code", icon: "🔶", iconBg: "#22c55e", desc: "AI代码补全，支持多语言", tags: ["AI编程", "免费/付费"], url: "https://tabnine.com", price: "freemium" },
-            { id: 33, name: "Codeium", category: "code", icon: "💫", iconBg: "#6366f1", desc: "免费AI代码补全工具，替代Copilot", tags: ["AI编程", "免费"], url: "https://codeium.com", price: "free", isNew: true },
-            { id: 34, name: "Windsurf", category: "code", icon: "🌊", iconBg: "#10a37f", desc: "AI代码编辑器，支持多文件编辑", tags: ["AI编程", "免费/付费"], url: "https://windsurf.ai", price: "freemium", isNew: true },
-            
-            // AI 3D
-            { id: 35, name: "Meshy AI", category: "3d", icon: "🎲", iconBg: "#8b5cf6", desc: "AI 3D模型生成，从2D图片生成3D模型", tags: ["3D建模", "免费/付费"], url: "https://meshy.ai", price: "freemium", isNew: true },
-            { id: 36, name: "Tripo3D", category: "3d", icon: "🏔️", iconBg: "#ec4899", desc: "AI 3D建模工具，快速生成3D资产", tags: ["3D建模", "免费"], url: "https://tripo3d.ai", price: "freemium", isNew: true },
-            { id: 37, name: "CSM", category: "3d", icon: "🔲", iconBg: "#6366f1", desc: "AI转3D平台，支持多种格式导出", tags: ["3D建模", "免费/付费"], url: "https://csm.ai", price: "freemium", isNew: true },
-            
-            // Productivity (效率工具)
-            { id: 38, name: "Notion", category: "productivity", icon: "📒", iconBg: "#000", desc: "全能笔记和项目管理工具", tags: ["效率", "免费/付费"], url: "https://notion.so", price: "freemium" },
-            { id: 39, name: "Otter.ai", category: "productivity", icon: "🦦", iconBg: "#f59e0b", desc: "AI会议记录和转录", tags: ["效率", "免费/付费"], url: "https://otter.ai", price: "freemium" },
-            { id: 40, name: "Mem", category: "productivity", icon: "🧠", iconBg: "#6366f1", desc: "AI驱动的笔记工具，自动整理", tags: ["效率", "付费"], url: "https://mem.ai", price: "paid" },
-            { id: 41, name: "Kimi", category: "productivity", icon: "🌙", iconBg: "#6366f1", desc: "月之暗面AI助手，支持长文本处理", tags: ["AI对话", "免费"], url: "https://kimi.moonshot.cn", price: "free", isNew: true },
-            
-            // Marketing (营销工具)
-            { id: 42, name: "HubSpot", category: "marketing", icon: "🔴", iconBg: "#ff7a59", desc: "营销自动化平台，AI辅助", tags: ["营销", "免费/付费"], url: "https://hubspot.com", price: "freemium" },
-            { id: 43, name: "Mailchimp", category: "marketing", icon: "📧", iconBg: "#ffe01b", desc: "邮件营销平台，AI优化内容", tags: ["营销", "免费/付费"], url: "https://mailchimp.com", price: "freemium" },
-            { id: 44, name: "SurferSEO", category: "marketing", icon: "🌊", iconBg: "#22c55e", desc: "AI SEO优化工具", tags: ["营销", "付费"], url: "https://surferseo.com", price: "paid" },
-            { id: 45, name: "Jasper AI", category: "marketing", icon: "🎯", iconBg: "#22c55e", desc: "AI营销内容创作平台", tags: ["营销", "付费"], url: "https://jasper.ai", price: "paid" },
-            
-            // Design (设计工具)
-            { id: 46, name: "Canva AI", category: "design", icon: "🎪", iconBg: "#00c4cc", desc: "在线设计平台，AI辅助设计", tags: ["设计", "免费/付费"], url: "https://canva.com", price: "freemium" },
-            { id: 47, name: "Figma AI", category: "design", icon: "🎨", iconBg: "#f24e1e", desc: "协作设计工具，AI辅助原型设计", tags: ["设计", "免费/付费"], url: "https://figma.com", price: "freemium" },
-            { id: 48, name: "Microsoft Designer", category: "design", icon: "✏️", iconBg: "#0078d4", desc: "微软AI设计工具，快速创建设计作品", tags: ["设计", "免费"], url: "https://designer.microsoft.com", price: "free", isNew: true },
-        ];
-
-        let displayedTools = 12;
-
-        const categoryColors = {
-            writing: "#10a37f", image: "#6b4ce6", video: "#ec4899", audio: "#f59e0b",
-            code: "#6366f1", productivity: "#22c55e", marketing: "#f97316", design: "#8b5cf6",
-            "3d": "#06b6d4", search: "#20B2AA"
-        };
-
-        const categoryNames = {
-            writing: "AI写作", image: "AI绘画", video: "AI视频", audio: "AI音频",
-            code: "AI编程", productivity: "效率工具", marketing: "营销工具", design: "设计工具",
-            "3d": "3D工具", search: "AI搜索"
-        };
-
-        // Theme Toggle
-        function toggleTheme() {
-            const body = document.body;
-            const themeBtn = document.querySelector('.theme-toggle');
-            
-            if (body.dataset.theme === 'light') {
-                body.dataset.theme = 'dark';
-                themeBtn.textContent = '🌙';
-                localStorage.setItem('theme', 'dark');
-            } else {
-                body.dataset.theme = 'light';
-                themeBtn.textContent = '☀️';
-                localStorage.setItem('theme', 'light');
+        let tools = [];
+        let currentCategory = 'all';
+        async function loadTools() {
+            try {
+                const res = await fetch('tools.json');
+                tools = await res.json();
+                document.getElementById('toolCount').textContent = tools.length + '+';
+                renderTools(tools);
+            } catch (e) {
+                document.getElementById('toolsGrid').innerHTML = '<p style="color:var(--secondary);text-align:center">数据加载失败，请刷新重试</p>';
             }
         }
-
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            document.body.dataset.theme = savedTheme;
-            document.querySelector('.theme-toggle').textContent = savedTheme === 'light' ? '☀️' : '🌙';
-        }
-
-        // Render Tools
-        function renderTools(filter = 'all') {
+        function renderTools(list) {
             const grid = document.getElementById('toolsGrid');
-            const filtered = filter === 'all' ? tools.slice(0, displayedTools) : tools.filter(t => t.category === filter).slice(0, displayedTools);
-            
-            grid.innerHTML = filtered.map(tool => `
-                <div class="tool-card fade-in" onclick="showToolDetail(${tool.id})">
-                    <div class="tool-header">
-                        <div class="tool-icon" style="background: ${tool.iconBg}">${tool.icon}</div>
-                        <div>
-                            <div class="tool-name">${tool.name} ${tool.isNew ? '<span style="background: var(--success); color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.7rem; margin-left: 0.5rem;">NEW</span>' : ''}</div>
-                            <div class="tool-category" style="background: ${categoryColors[tool.category]}20; color: ${categoryColors[tool.category]}">
-                                ${categoryNames[tool.category]}
-                            </div>
-                        </div>
+            const filtered = currentCategory === 'all' ? list : list.filter(t => t.category === currentCategory);
+            if (filtered.length === 0) {
+                grid.innerHTML = '<p style="color:var(--text-secondary);text-align:center;padding:2rem">该分类暂无工具</p>';
+                return;
+            }
+            grid.innerHTML = filtered.map(t => `
+                <div class="tool-card">
+                    <div class="tool-icon">${t.icon}</div>
+                    <div class="tool-name">${t.name}</div>
+                    <div class="tool-desc">${t.desc}</div>
+                    <div class="tool-tags">
+                        ${t.tags.map(tag => `<span class="tag ${tag.includes('免费') || t.hot ? 'hot' : ''}">${tag}</span>`).join('')}
                     </div>
-                    <div class="tool-desc">${tool.desc}</div>
-                    <div class="tool-footer">
-                        <div class="tool-tags">
-                            ${tool.tags.map(tag => `<span class="tool-tag" style="background: rgba(99, 102, 241, 0.2); color: var(--primary);">${tag}</span>`).join('')}
-                        </div>
-                        <span class="tool-price ${tool.price === 'free' ? 'price-free' : tool.price === 'paid' ? 'price-paid' : 'price-freemium'}">
-                            ${tool.price === 'free' ? '🆓 免费' : tool.price === 'paid' ? '💰 付费' : '⚡ Freemium'}
-                        </span>
-                    </div>
+                    <a href="${t.url}" target="_blank" class="tool-link">访问 →</a>
                 </div>
             `).join('');
-            
-            // Update tool count
-            document.getElementById('toolCount').textContent = tools.length + '+';
         }
-
-        // Load More Tools
-        function loadMoreTools() {
-            displayedTools += 12;
-            const activeCategory = document.querySelector('.category-tag.active')?.dataset.category || 'all';
-            renderTools(activeCategory);
-            showToast('已加载更多工具');
-        }
-
-        // Category filter
-        document.querySelectorAll('.category-tag').forEach(tag => {
-            tag.addEventListener('click', () => {
-                document.querySelectorAll('.category-tag').forEach(t => t.classList.remove('active'));
-                tag.classList.add('active');
-                displayedTools = 12;
-                renderTools(tag.dataset.category);
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelector('.category-btn.active').classList.remove('active');
+                btn.classList.add('active');
+                currentCategory = btn.dataset.category;
+                renderTools(tools);
             });
         });
-
-        // Search
-        document.getElementById('searchInput').addEventListener('input', (e) => {
-            const query = e.target.value.toLowerCase();
-            if (query.length < 2) {
-                displayedTools = 12;
-                renderTools(document.querySelector('.category-tag.active')?.dataset.category || 'all');
-                return;
-            }
-            
-            const filtered = tools.filter(t => 
-                t.name.toLowerCase().includes(query) || 
-                t.desc.toLowerCase().includes(query) ||
-                t.tags.some(tag => tag.toLowerCase().includes(query)) ||
-                categoryNames[t.category].toLowerCase().includes(query)
-            );
-            
-            const grid = document.getElementById('toolsGrid');
-            grid.innerHTML = filtered.length > 0 ? filtered.map(tool => `
-                <div class="tool-card fade-in" onclick="showToolDetail(${tool.id})">
-                    <div class="tool-header">
-                        <div class="tool-icon" style="background: ${tool.iconBg}">${tool.icon}</div>
-                        <div>
-                            <div class="tool-name">${tool.name}</div>
-                            <div class="tool-category" style="background: ${categoryColors[tool.category]}20; color: ${categoryColors[tool.category]}">
-                                ${categoryNames[tool.category]}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tool-desc">${tool.desc}</div>
-                    <div class="tool-footer">
-                        <div class="tool-tags">
-                            ${tool.tags.map(tag => `<span class="tool-tag" style="background: rgba(99, 102, 241, 0.2); color: var(--primary);">${tag}</span>`).join('')}
-                        </div>
-                        <span class="tool-price ${tool.price === 'free' ? 'price-free' : tool.price === 'paid' ? 'price-paid' : 'price-freemium'}">
-                            ${tool.price === 'free' ? '🆓 免费' : tool.price === 'paid' ? '💰 付费' : '⚡ Freemium'}
-                        </span>
-                    </div>
-                </div>
-            `).join('') : '<p style="text-align: center; color: var(--text-secondary); grid-column: 1/-1;">没有找到匹配的工具</p>';
+        document.getElementById('searchInput').addEventListener('input', e => {
+            const q = e.target.value.toLowerCase();
+            const filtered = tools.filter(t => t.name.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q) || t.categoryName.toLowerCase().includes(q));
+            renderTools(filtered);
         });
-
-        // Tool detail modal
-        function showToolDetail(id) {
-            const tool = tools.find(t => t.id === id);
-            const modal = document.getElementById('toolModal');
-            const modalBody = document.getElementById('modalBody');
-            
-            modalBody.innerHTML = `
-                <div style="text-align: center; margin-bottom: 2rem;">
-                    <div class="tool-icon" style="width: 80px; height: 80px; font-size: 2.5rem; margin: 0 auto 1rem; background: ${tool.iconBg}">
-                        ${tool.icon}
-                    </div>
-                    <h2 style="margin-bottom: 0.5rem;">${tool.name}</h2>
-                    <span style="background: ${categoryColors[tool.category]}20; color: ${categoryColors[tool.category]}; padding: 0.25rem 1rem; border-radius: 50px; font-size: 0.85rem;">
-                        ${categoryNames[tool.category]}
-                    </span>
-                </div>
-                <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1rem;">${tool.desc}</p>
-                <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem;">
-                    ${tool.tags.map(tag => `<span class="tool-tag" style="background: rgba(99, 102, 241, 0.2); color: var(--primary);">${tag}</span>`).join('')}
-                    ${tool.isNew ? '<span class="tool-tag" style="background: rgba(34, 197, 94, 0.2); color: var(--success);">🆕 新上线</span>' : ''}
-                </div>
-                <div style="background: var(--bg-card); padding: 1rem; border-radius: 12px; margin-bottom: 1.5rem;">
-                    <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                        <span style="color: var(--text-secondary);">价格:</span>
-                        <span class="tool-price ${tool.price === 'free' ? 'price-free' : tool.price === 'paid' ? 'price-paid' : 'price-freemium'}">
-                            ${tool.price === 'free' ? '🆓 免费' : tool.price === 'paid' ? '💰 付费' : '⚡ Freemium'}
-                        </span>
-                    </div>
-                    <div style="display: flex; justify-content: space-between;">
-                        <span style="color: var(--text-secondary);">推荐指数:</span>
-                        <span style="color: #f59e0b;">⭐⭐⭐⭐⭐</span>
-                    </div>
-                </div>
-                <a href="${tool.url}" target="_blank" rel="noopener" style="display: block; text-align: center; background: var(--gradient); color: white; padding: 1rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem;">
-                    访问官网 →
-                </a>
-                <p style="text-align: center; color: var(--text-secondary); font-size: 0.85rem; margin-top: 1rem;">
-                    通过此链接访问可能会获得佣金支持
-                </p>
-            `;
-            
-            modal.classList.add('active');
+        function toggleTheme() {
+            const html = document.documentElement;
+            const isDark = html.getAttribute('data-theme') !== 'light';
+            html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            document.querySelector('.theme-toggle').textContent = isDark ? '☀️' : '🌙';
         }
-
-        function closeModal() {
-            document.getElementById('toolModal').classList.remove('active');
-        }
-
-        // Mini tool modals
-        function openTool(type) {
-            const modal = document.getElementById('toolModal');
-            const modalBody = document.getElementById('modalBody');
-            
-            const toolModals = {
-                json: `
-                    <h2 style="margin-bottom: 1rem;">📄 JSON 格式化工具</h2>
-                    <textarea id="jsonInput" placeholder="粘贴JSON内容..." style="width: 100%; height: 180px; background: var(--bg-card); border: none; border-radius: 8px; padding: 1rem; color: var(--text); font-family: monospace; resize: vertical;"></textarea>
-                    <div style="display: flex; gap: 1rem; margin: 1rem 0;">
-                        <button onclick="formatJson()" style="flex: 1; padding: 0.75rem; background: var(--primary); border: none; border-radius: 8px; color: white; cursor: pointer;">格式化</button>
-                        <button onclick="compressJson()" style="flex: 1; padding: 0.75rem; background: var(--bg-card); border: none; border-radius: 8px; color: white; cursor: pointer;">压缩</button>
-                        <button onclick="validateJson()" style="flex: 1; padding: 0.75rem; background: var(--success); border: none; border-radius: 8px; color: white; cursor: pointer;">校验</button>
-                    </div>
-                    <textarea id="jsonOutput" placeholder="结果..." style="width: 100%; height: 180px; background: var(--bg-card); border: none; border-radius: 8px; padding: 1rem; color: var(--text); font-family: monospace; resize: vertical;"></textarea>
-                `,
-                color: `
-                    <h2 style="margin-bottom: 1rem;">🎨 颜色提取器</h2>
-                    <input type="color" id="colorPicker" style="width: 100%; height: 60px; border: none; border-radius: 8px; cursor: pointer; margin-bottom: 1rem;">
-                    <div style="background: var(--bg-card); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                            <span>HEX:</span>
-                            <span id="hexValue" style="font-family: monospace; cursor: pointer;" onclick="copyToClipboard(this.textContent)">#6366f1</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                            <span>RGB:</span>
-                            <span id="rgbValue" style="font-family: monospace; cursor: pointer;" onclick="copyToClipboard(this.textContent)">rgb(99, 102, 241)</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between;">
-                            <span>HSL:</span>
-                            <span id="hslValue" style="font-family: monospace; cursor: pointer;" onclick="copyToClipboard(this.textContent)">hsl(239, 84%, 67%)</span>
-                        </div>
-                    </div>
-                    <p style="color: var(--text-secondary); font-size: 0.85rem;">点击颜色值可复制</p>
-                `,
-                base64: `
-                    <h2 style="margin-bottom: 1rem;">🔤 Base64 编码/解码</h2>
-                    <textarea id="base64Input" placeholder="输入内容..." style="width: 100%; height: 150px; background: var(--bg-card); border: none; border-radius: 8px; padding: 1rem; color: var(--text); resize: vertical;"></textarea>
-                    <div style="display: flex; gap: 1rem; margin: 1rem 0;">
-                        <button onclick="encodeBase64()" style="flex: 1; padding: 0.75rem; background: var(--primary); border: none; border-radius: 8px; color: white; cursor: pointer;">编码</button>
-                        <button onclick="decodeBase64()" style="flex: 1; padding: 0.75rem; background: var(--secondary); border: none; border-radius: 8px; color: white; cursor: pointer;">解码</button>
-                    </div>
-                    <textarea id="base64Output" placeholder="结果..." style="width: 100%; height: 150px; background: var(--bg-card); border: none; border-radius: 8px; padding: 1rem; color: var(--text); resize: vertical;"></textarea>
-                `,
-                timestamp: `
-                    <h2 style="margin-bottom: 1rem;">⏰ 时间戳转换</h2>
-                    <div style="background: var(--bg-card); padding: 1.5rem; border-radius: 8px; margin-bottom: 1rem;">
-                        <div style="margin-bottom: 1rem;">
-                            <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">当前时间戳:</label>
-                            <div style="display: flex; gap: 0.5rem;">
-                                <input type="text" id="currentTimestamp" style="flex: 1; padding: 0.75rem; background: var(--bg-secondary); border: none; border-radius: 6px; color: var(--text); font-family: monospace;">
-                                <button onclick="copyToClipboard(document.getElementById('currentTimestamp').value)" style="padding: 0.75rem; background: var(--primary); border: none; border-radius: 6px; color: white; cursor: pointer;">复制</button>
-                            </div>
-                        </div>
-                        <div>
-                            <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">时间戳转日期:</label>
-                            <div style="display: flex; gap: 0.5rem;">
-                                <input type="text" id="timestampInput" placeholder="输入时间戳" style="flex: 1; padding: 0.75rem; background: var(--bg-secondary); border: none; border-radius: 6px; color: var(--text); font-family: monospace;">
-                                <button onclick="timestampToDate()" style="padding: 0.75rem; background: var(--secondary); border: none; border-radius: 6px; color: white; cursor: pointer;">转换</button>
-                            </div>
-                            <div id="dateOutput" style="margin-top: 0.5rem; font-family: monospace; color: var(--text-secondary);"></div>
-                        </div>
-                    </div>
-                `,
-                qrcode: `
-                    <h2 style="margin-bottom: 1rem;">📱 二维码生成</h2>
-                    <textarea id="qrInput" placeholder="输入文本或URL..." style="width: 100%; height: 100px; background: var(--bg-card); border: none; border-radius: 8px; padding: 1rem; color: var(--text); resize: vertical;"></textarea>
-                    <button onclick="generateQR()" style="width: 100%; padding: 0.75rem; background: var(--primary); border: none; border-radius: 8px; color: white; cursor: pointer; margin: 1rem 0;">生成二维码</button>
-                    <div id="qrOutput" style="text-align: center; padding: 1rem; background: var(--bg-card); border-radius: 8px; min-height: 150px;"></div>
-                `,
-                url: `
-                    <h2 style="margin-bottom: 1rem;">🔗 URL编码/解码</h2>
-                    <textarea id="urlInput" placeholder="输入URL..." style="width: 100%; height: 150px; background: var(--bg-card); border: none; border-radius: 8px; padding: 1rem; color: var(--text); resize: vertical;"></textarea>
-                    <div style="display: flex; gap: 1rem; margin: 1rem 0;">
-                        <button onclick="encodeURL()" style="flex: 1; padding: 0.75rem; background: var(--primary); border: none; border-radius: 8px; color: white; cursor: pointer;">编码</button>
-                        <button onclick="decodeURL()" style="flex: 1; padding: 0.75rem; background: var(--secondary); border: none; border-radius: 8px; color: white; cursor: pointer;">解码</button>
-                    </div>
-                    <textarea id="urlOutput" placeholder="结果..." style="width: 100%; height: 150px; background: var(--bg-card); border: none; border-radius: 8px; padding: 1rem; color: var(--text); resize: vertical;"></textarea>
-                `,
-                hash: `
-                    <h2 style="margin-bottom: 1rem;">🔐 MD5加密</h2>
-                    <textarea id="hashInput" placeholder="输入要加密的文本..." style="width: 100%; height: 150px; background: var(--bg-card); border: none; border-radius: 8px; padding: 1rem; color: var(--text); resize: vertical;"></textarea>
-                    <button onclick="generateHash()" style="width: 100%; padding: 0.75rem; background: var(--primary); border: none; border-radius: 8px; color: white; cursor: pointer; margin: 1rem 0;">生成MD5</button>
-                    <div style="background: var(--bg-card); padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                        <div style="margin-bottom: 0.5rem; color: var(--text-secondary);">32位小写:</div>
-                        <div id="hash32" style="font-family: monospace; word-break: break-all; cursor: pointer;" onclick="copyToClipboard(this.textContent)"></div>
-                    </div>
-                    <div style="background: var(--bg-card); padding: 1rem; border-radius: 8px;">
-                        <div style="margin-bottom: 0.5rem; color: var(--text-secondary);">32位大写:</div>
-                        <div id="hash32Upper" style="font-family: monospace; word-break: break-all; cursor: pointer;" onclick="copyToClipboard(this.textContent)"></div>
-                    </div>
-                `,
-                wordcount: `
-                    <h2 style="margin-bottom: 1rem;">📊 字数统计</h2>
-                    <textarea id="wcInput" placeholder="输入文本..." style="width: 100%; height: 200px; background: var(--bg-card); border: none; border-radius: 8px; padding: 1rem; color: var(--text); resize: vertical;" oninput="countWords()"></textarea>
-                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;">
-                        <div style="background: var(--bg-card); padding: 1rem; border-radius: 8px; text-align: center;">
-                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary);" id="charCount">0</div>
-                            <div style="font-size: 0.85rem; color: var(--text-secondary);">字符数</div>
-                        </div>
-                        <div style="background: var(--bg-card); padding: 1rem; border-radius: 8px; text-align: center;">
-                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--secondary);" id="wordCount">0</div>
-                            <div style="font-size: 0.85rem; color: var(--text-secondary);">词数</div>
-                        </div>
-                        <div style="background: var(--bg-card); padding: 1rem; border-radius: 8px; text-align: center;">
-                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--success);" id="lineCount">0</div>
-                            <div style="font-size: 0.85rem; color: var(--text-secondary);">行数</div>
-                        </div>
-                        <div style="background: var(--bg-card); padding: 1rem; border-radius: 8px; text-align: center;">
-                            <div style="font-size: 1.5rem; font-weight: 700; color: var(--warning);" id="cnCount">0</div>
-                            <div style="font-size: 0.85rem; color: var(--text-secondary);">中文字数</div>
-                        </div>
-                    </div>
-                `,
-                regex: `
-                    <h2 style="margin-bottom: 1rem;">🔍 正则表达式测试</h2>
-                    <div style="margin-bottom: 1rem;">
-                        <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">正则表达式:</label>
-                        <input type="text" id="regexInput" placeholder="输入正则表达式，如: \\d+" style="width: 100%; padding: 0.75rem; background: var(--bg-card); border: none; border-radius: 8px; color: var(--text); font-family: monospace;">
-                    </div>
-                    <textarea id="regexTestInput" placeholder="输入要测试的文本..." style="width: 100%; height: 120px; background: var(--bg-card); border: none; border-radius: 8px; padding: 1rem; color: var(--text); resize: vertical;" oninput="testRegex()"></textarea>
-                    <div id="regexResult" style="background: var(--bg-card); padding: 1rem; border-radius: 8px; margin-top: 1rem; min-height: 60px;">
-                        <span style="color: var(--text-secondary);">匹配结果将在此显示...</span>
-                    </div>
-                `,
-                image: `
-                    <h2 style="margin-bottom: 1rem;">🖼️ 图片优化</h2>
-                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">选择图片压缩质量:</p>
-                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
-                        <button onclick="compressImage(0.9)" style="flex: 1; padding: 0.75rem; background: var(--success); border: none; border-radius: 8px; color: white; cursor: pointer;">高质量 90%</button>
-                        <button onclick="compressImage(0.7)" style="flex: 1; padding: 0.75rem; background: var(--primary); border: none; border-radius: 8px; color: white; cursor: pointer;">中等 70%</button>
-                        <button onclick="compressImage(0.5)" style="flex: 1; padding: 0.75rem; background: var(--warning); border: none; border-radius: 8px; color: white; cursor: pointer;">低质量 50%</button>
-                    </div>
-                    <div style="background: var(--bg-card); padding: 2rem; border-radius: 8px; text-align: center;">
-                        <p style="color: var(--text-secondary);">图片压缩功能需要服务器端支持</p>
-                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 0.5rem;">建议使用 TinyPNG 或 Squoosh 进行在线压缩</p>
-                    </div>
-                `
-            };
-            
-            modalBody.innerHTML = toolModals[type] || '<p>功能开发中...</p>';
-            modal.classList.add('active');
-            
-            if (type === 'color') {
-                const picker = document.getElementById('colorPicker');
-                if (picker) picker.addEventListener('input', updateColorValues);
-            }
-            
-            if (type === 'timestamp') {
-                document.getElementById('currentTimestamp').value = Math.floor(Date.now() / 1000);
-            }
-        }
-
-        // Tool functions
-        function formatJson() {
-            try {
-                const obj = JSON.parse(document.getElementById('jsonInput').value);
-                document.getElementById('jsonOutput').value = JSON.stringify(obj, null, 2);
-                showToast('格式化成功！');
-            } catch (e) {
-                document.getElementById('jsonOutput').value = 'JSON格式错误: ' + e.message;
-                showToast('JSON格式错误');
-            }
-        }
-
-        function compressJson() {
-            try {
-                const obj = JSON.parse(document.getElementById('jsonInput').value);
-                document.getElementById('jsonOutput').value = JSON.stringify(obj);
-                showToast('压缩成功！');
-            } catch (e) {
-                document.getElementById('jsonOutput').value = 'JSON格式错误: ' + e.message;
-            }
-        }
-
-        function validateJson() {
-            try {
-                JSON.parse(document.getElementById('jsonInput').value);
-                document.getElementById('jsonOutput').value = '✅ JSON格式正确！';
-                showToast('校验通过');
-            } catch (e) {
-                document.getElementById('jsonOutput').value = '❌ JSON格式错误: ' + e.message;
-                showToast('校验失败');
-            }
-        }
-
-        function updateColorValues() {
-            const color = document.getElementById('colorPicker').value;
-            document.getElementById('hexValue').textContent = color;
-            const r = parseInt(color.slice(1, 3), 16);
-            const g = parseInt(color.slice(3, 5), 16);
-            const b = parseInt(color.slice(5, 7), 16);
-            document.getElementById('rgbValue').textContent = `rgb(${r}, ${g}, ${b})`;
-            document.getElementById('hslValue').textContent = rgbToHsl(r, g, b);
-        }
-
-        function rgbToHsl(r, g, b) {
-            const rNorm = r / 255, gNorm = g / 255, bNorm = b / 255;
-            const max = Math.max(rNorm, gNorm, bNorm), min = Math.min(rNorm, gNorm, bNorm);
-            let h, s, l = (max + min) / 2;
-            if (max === min) { h = s = 0; }
-            else {
-                const d = max - min;
-                s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
-                switch (max) {
-                    case rNorm: h = ((gNorm - bNorm) / d + (gNorm < bNorm ? 6 : 0)) / 6; break;
-                    case gNorm: h = ((bNorm - rNorm) / d + 2) / 6; break;
-                    case bNorm: h = ((rNorm - gNorm) / d + 4) / 6; break;
-                }
-            }
-            return `hsl(${Math.round(h * 360)}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)`;
-        }
-
-        function encodeBase64() {
-            try {
-                document.getElementById('base64Output').value = btoa(unescape(encodeURIComponent(document.getElementById('base64Input').value)));
-                showToast('编码成功！');
-            } catch (e) {
-                document.getElementById('base64Output').value = '编码错误: ' + e.message;
-            }
-        }
-
-        function decodeBase64() {
-            try {
-                document.getElementById('base64Output').value = decodeURIComponent(escape(atob(document.getElementById('base64Input').value)));
-                showToast('解码成功！');
-            } catch (e) {
-                document.getElementById('base64Output').value = '解码错误: ' + e.message;
-            }
-        }
-
-        function timestampToDate() {
-            const ts = parseInt(document.getElementById('timestampInput').value);
-            if (isNaN(ts)) {
-                document.getElementById('dateOutput').textContent = '请输入有效的时间戳';
-                return;
-            }
-            const date = ts > 1e12 ? new Date(ts) : new Date(ts * 1000);
-            document.getElementById('dateOutput').textContent = date.toLocaleString('zh-CN');
-        }
-
-        function generateQR() {
-            const text = document.getElementById('qrInput').value;
-            if (!text) {
-                showToast('请输入内容');
-                return;
-            }
-            document.getElementById('qrOutput').innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(text)}" style="max-width: 100%; border-radius: 8px;" alt="QR Code">`;
-            showToast('二维码已生成！');
-        }
-
-        function encodeURL() {
-            document.getElementById('urlOutput').value = encodeURIComponent(document.getElementById('urlInput').value);
-            showToast('编码成功！');
-        }
-
-        function decodeURL() {
-            try {
-                document.getElementById('urlOutput').value = decodeURIComponent(document.getElementById('urlInput').value);
-                showToast('解码成功！');
-            } catch (e) {
-                document.getElementById('urlOutput').value = '解码错误: ' + e.message;
-            }
-        }
-
-        function generateHash() {
-            // Simple hash demonstration (using Web Crypto API for real MD5)
-            const input = document.getElementById('hashInput').value;
-            if (!input) {
-                showToast('请输入内容');
-                return;
-            }
-            // Note: Real MD5 requires a library, using placeholder here
-            const hash = '需要MD5库才能生成真正的MD5';
-            document.getElementById('hash32').textContent = '需引入MD5库';
-            document.getElementById('hash32Upper').textContent = '才能真正生成MD5';
-            showToast('提示：需要引入MD5库');
-        }
-
-        function testRegex() {
-            const pattern = document.getElementById('regexInput').value;
-            const text = document.getElementById('regexTestInput').value;
-            const result = document.getElementById('regexResult');
-            
-            if (!pattern || !text) {
-                result.innerHTML = '<span style="color: var(--text-secondary);">请输入正则表达式和测试文本</span>';
-                return;
-            }
-            
-            try {
-                const regex = new RegExp(pattern, 'g');
-                const matches = text.match(regex);
-                
-                if (matches) {
-                    result.innerHTML = `<span style="color: var(--success);">✅ 找到 ${matches.length} 个匹配:</span><br><code style="color: var(--primary);">${matches.join(', ')}</code>`;
-                } else {
-                    result.innerHTML = '<span style="color: var(--warning);">❌ 没有找到匹配</span>';
-                }
-            } catch (e) {
-                result.innerHTML = `<span style="color: var(--secondary);">❌ 正则表达式错误: ${e.message}</span>`;
-            }
-        }
-
-        function countWords() {
-            const text = document.getElementById('wcInput').value;
-            document.getElementById('charCount').textContent = text.length;
-            document.getElementById('wordCount').textContent = text.trim() ? text.trim().split(/\s+/).length : 0;
-            document.getElementById('lineCount').textContent = text ? text.split('\n').length : 0;
-            document.getElementById('cnCount').textContent = (text.match(/[\u4e00-\u9fa5]/g) || []).length;
-        }
-
-        function compressImage(quality) {
-            showToast(`压缩质量: ${Math.round(quality * 100)}% - 需要服务器端支持`);
-        }
-
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                showToast('已复制到剪贴板');
-            });
-        }
-
-        function showToast(message) {
-            const toast = document.getElementById('toast');
-            toast.textContent = message;
-            toast.classList.add('show');
-            setTimeout(() => toast.classList.remove('show'), 3000);
-        }
-
-        function subscribeNewsletter(e) {
-            e.preventDefault();
-            const email = e.target.querySelector('input').value;
-            showToast('订阅成功！我们会定期发送最新资讯到您的邮箱');
-            e.target.reset();
-        }
-
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Back to top button visibility
         window.addEventListener('scroll', () => {
-            const btn = document.querySelector('.back-to-top');
-            if (window.scrollY > 500) {
-                btn.classList.add('show');
-            } else {
-                btn.classList.remove('show');
-            }
+            document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
         });
-
-        // Modal close on click outside
-        document.getElementById('toolModal').addEventListener('click', (e) => {
-            if (e.target.id === 'toolModal') closeModal();
-        });
-
-        // Keyboard shortcuts
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModal();
-            if (e.key === '/' && e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
-                e.preventDefault();
-                document.getElementById('searchInput').focus();
-            }
-        });
-
-        // Initialize
-        renderTools();
+        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+        loadTools();
     </script>
 </body>
 </html>
