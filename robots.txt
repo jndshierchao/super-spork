@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://jndshierchao.github.io/super-spork/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
