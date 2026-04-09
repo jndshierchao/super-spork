@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI工具集 - 发现最好的AI工具 | 2026最全导航</title>
-    <meta name="description" content="发现最全的AI工具导航网站，涵盖AI写作、AI绘画、AI视频、AI音频、AI编程等领域，170+精选AI工具，包含免费工具推荐。">
-    <meta name="keywords" content="AI工具,ChatGPT,Midjourney,Sora,AI绘画,AI写作,AI视频,AI工具导航,AI助手">
+    <meta name="description" content="发现最全的AI工具导航网站，涵盖AI写作、AI绘画、AI视频、AI音频、AI编程等领域，180+精选AI工具，包含免费工具推荐。">
+    <meta name="keywords" content="AI工具,ChatGPT,Midjourney,Sora,AI绘画,AI写作,AI视频,AI工具导航,AI助手,AI智能体">
     <link rel="canonical" href="https://jndshierchao.github.io/super-spork/">
     <meta property="og:title" content="AI工具集 - 发现最好的AI工具">
-    <meta property="og:description" content="170+精选AI工具导航">
+    <meta property="og:description" content="180+精选AI工具导航，支持免费使用">
     <meta property="og:type" content="website">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,49 +21,61 @@
         body{font-family:'Noto Sans SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background .3s,color .3s}
         a{text-decoration:none;color:inherit}
         header{background:var(--bg-secondary);border-bottom:1px solid var(--border);position:fixed;width:100%;top:0;z-index:100;backdrop-filter:blur(10px)}
-        .header-content{max-width:1400px;margin:0 auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+        .header-content{max-width:1400px;margin:0 auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
         .logo{font-size:1.5rem;font-weight:700;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
         .nav{display:flex;gap:1.5rem;align-items:center}
         .nav a{color:var(--text-secondary);transition:color .3s}
         .nav a:hover{color:var(--primary)}
+        .header-right{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
         .theme-toggle{background:var(--bg-card);border:none;color:var(--text);padding:.5rem;border-radius:8px;cursor:pointer;font-size:1.2rem}
-        .search-box{background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:.75rem 1.5rem;width:300px;color:var(--text);transition:border-color .3s}
+        .search-box{background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:.75rem 1rem;width:220px;color:var(--text);transition:border-color .3s;font-size:.9rem}
         .search-box:focus{outline:none;border-color:var(--primary)}
-        main{max-width:1400px;margin:0 auto;padding:6rem 2rem 2rem}
-        .hero{text-align:center;padding:3rem 0}
-        .hero h1{font-size:3rem;margin-bottom:1rem}
-        .hero p{color:var(--text-secondary);font-size:1.2rem;max-width:600px;margin:0 auto}
-        .stats{display:flex;justify-content:center;gap:3rem;margin-top:2rem}
+        main{max-width:1400px;margin:0 auto;padding:7rem 2rem 2rem}
+        .hero{text-align:center;padding:2rem 0}
+        .hero h1{font-size:2.5rem;margin-bottom:1rem}
+        .hero p{color:var(--text-secondary);font-size:1.1rem;max-width:600px;margin:0 auto}
+        .stats{display:flex;justify-content:center;gap:3rem;margin-top:1.5rem}
         .stat{text-align:center}
         .stat-num{font-size:2rem;font-weight:700;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
         .stat-label{color:var(--text-secondary)}
-        .categories{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;margin:2rem 0}
-        .category-btn{background:var(--bg-card);border:1px solid var(--border);padding:.5rem 1.25rem;border-radius:20px;cursor:pointer;color:var(--text);transition:all .3s;font-size:.9rem}
-        .category-btn:hover,.category-btn.active{background:var(--primary);border-color:var(--primary)}
-        .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;margin-top:2rem}
-        .tool-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:16px;padding:1.5rem;transition:all .3s}
-        .tool-card:hover{transform:translateY(-4px);border-color:var(--primary);box-shadow:0 10px 40px rgba(99,102,241,0.2)}
-        .tool-icon{font-size:2.5rem;margin-bottom:1rem}
-        .tool-name{font-size:1.1rem;font-weight:600;margin-bottom:.5rem}
+        .categories{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:1.5rem 0}
+        .category-btn{background:var(--bg-card);border:1px solid var(--border);padding:.5rem 1rem;border-radius:20px;cursor:pointer;color:var(--text);transition:all .3s;font-size:.85rem;display:flex;align-items:center;gap:.3rem}
+        .category-btn:hover,.category-btn.active{background:var(--primary);border-color:var(--primary);color:#fff}
+        .category-btn .count{background:rgba(255,255,255,.2);padding:.1rem .4rem;border-radius:8px;font-size:.75rem}
+        .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;margin-top:1.5rem}
+        .tool-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:16px;padding:1.25rem;transition:all .3s}
+        .tool-card:hover{transform:translateY(-4px);border-color:var(--primary);box-shadow:0 10px 40px rgba(99,102,241,0.15)}
+        .tool-header{display:flex;align-items:center;gap:1rem;margin-bottom:.75rem}
+        .tool-icon{font-size:2rem}
+        .tool-name{font-size:1.05rem;font-weight:600}
+        .tool-category{font-size:.75rem;color:var(--primary);background:rgba(99,102,241,.15);padding:.2rem .5rem;border-radius:4px}
         .tool-desc{color:var(--text-secondary);font-size:.85rem;margin-bottom:.75rem;line-height:1.5}
-        .tool-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
-        .tag{background:var(--bg-card);padding:.25rem .75rem;border-radius:12px;font-size:.75rem;color:var(--text-secondary)}
+        .tool-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
+        .tag{background:var(--bg-card);padding:.2rem .6rem;border-radius:10px;font-size:.75rem;color:var(--text-secondary)}
         .tag.hot{background:linear-gradient(135deg,#ef4444,#f97316);color:#fff}
-        .tool-link{display:inline-block;background:var(--primary);color:#fff;padding:.5rem 1.25rem;border-radius:8px;font-size:.9rem;transition:background .3s}
+        .tag.free{background:var(--success);color:#fff}
+        .tool-link{display:inline-block;background:var(--primary);color:#fff;padding:.45rem 1rem;border-radius:8px;font-size:.85rem;transition:background .3s}
         .tool-link:hover{background:var(--primary-dark)}
-        .news-section{margin-top:4rem;padding:2rem;background:var(--bg-secondary);border-radius:16px}
-        .news-title{font-size:1.5rem;margin-bottom:1.5rem;display:flex;align-items:center;gap:.5rem}
-        .news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
-        .news-card{background:var(--bg-card);padding:1.5rem;border-radius:12px}
-        .news-date{color:var(--primary);font-size:.85rem;margin-bottom:.5rem}
-        .news-title-text{font-weight:600;margin-bottom:.5rem}
-        .news-summary{color:var(--text-secondary);font-size:.9rem}
-        .back-to-top{position:fixed;bottom:2rem;right:2rem;background:var(--primary);color:#fff;width:50px;height:50px;border-radius:50%;border:none;cursor:pointer;opacity:0;transition:opacity .3s;font-size:1.5rem;display:flex;align-items:center;justify-content:center}
+        .news-section{margin-top:3rem;padding:1.5rem;background:var(--bg-secondary);border-radius:16px}
+        .news-title{font-size:1.3rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:.5rem}
+        .news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+        .news-card{background:var(--bg-card);padding:1.25rem;border-radius:12px}
+        .news-date{color:var(--primary);font-size:.8rem;margin-bottom:.4rem}
+        .news-title-text{font-weight:600;margin-bottom:.4rem;font-size:.95rem}
+        .news-summary{color:var(--text-secondary);font-size:.85rem}
+        .back-to-top{position:fixed;bottom:2rem;right:2rem;background:var(--primary);color:#fff;width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;opacity:0;transition:opacity .3s;font-size:1.3rem;display:flex;align-items:center;justify-content:center}
         .back-to-top.show{opacity:1}
-        footer{background:var(--bg-secondary);padding:2rem;text-align:center;margin-top:4rem;border-top:1px solid var(--border)}
-        footer p{color:var(--text-secondary)}
+        footer{background:var(--bg-secondary);padding:1.5rem;text-align:center;margin-top:3rem;border-top:1px solid var(--border)}
+        footer p{color:var(--text-secondary);font-size:.9rem}
         .loading{text-align:center;padding:2rem;color:var(--text-secondary)}
-        @media(max-width:768px){.header-content{flex-wrap:wrap;gap:1rem}.search-box{width:100%}.hero h1{font-size:2rem}.stats{flex-wrap:wrap;gap:1.5rem}.tools-grid{grid-template-columns:1fr}}
+        .empty-state{text-align:center;padding:3rem;color:var(--text-secondary)}
+        .api-section{background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(236,72,153,.1));border:1px solid var(--border);border-radius:16px;padding:2rem;margin-top:3rem}
+        .api-title{font-size:1.3rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+        .api-desc{color:var(--text-secondary);margin-bottom:1.5rem}
+        .api-endpoint{background:var(--bg-card);padding:1rem;border-radius:8px;font-family:monospace;font-size:.9rem;margin-bottom:1rem;overflow-x:auto}
+        .api-method{display:inline-block;background:var(--success);color:#fff;padding:.2rem .6rem;border-radius:4px;font-size:.8rem;margin-right:.5rem}
+        .api-params{font-size:.85rem;color:var(--text-secondary)}
+        @media(max-width:768px){.header-content{flex-direction:column}.search-box{width:100%}.hero h1{font-size:1.8rem}.stats{flex-wrap:wrap;gap:1.5rem}.tools-grid{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
@@ -73,36 +85,26 @@
             <nav class="nav">
                 <a href="#tools">工具</a>
                 <a href="#news">资讯</a>
+                <a href="#api">API</a>
                 <a href="privacy.html">隐私政策</a>
             </nav>
-            <input type="text" class="search-box" placeholder="🔍 搜索AI工具..." id="searchInput">
-            <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">🌙</button>
+            <div class="header-right">
+                <input type="text" class="search-box" placeholder="🔍 搜索AI工具..." id="searchInput">
+                <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">🌙</button>
+            </div>
         </div>
     </header>
     <main>
         <section class="hero">
             <h1>发现最好的AI工具 🤖</h1>
-            <p>收录全球170+优质AI工具，覆盖写作、绘画、视频、编程等全场景，让AI助你提升效率</p>
+            <p>收录全球180+优质AI工具，覆盖写作、绘画、视频、编程等全场景，让AI助你提升效率</p>
             <div class="stats">
-                <div class="stat"><div class="stat-num" id="toolCount">170+</div><div class="stat-label">精选工具</div></div>
+                <div class="stat"><div class="stat-num" id="toolCount">180+</div><div class="stat-label">精选工具</div></div>
                 <div class="stat"><div class="stat-num">12</div><div class="stat-label">分类覆盖</div></div>
-                <div class="stat"><div class="stat-num">100%</div><div class="stat-label">免费推荐</div></div>
+                <div class="stat"><div class="stat-num">API</div><div class="stat-label">开放接口</div></div>
             </div>
         </section>
-        <div class="categories" id="categories">
-            <button class="category-btn active" data-category="all">全部</button>
-            <button class="category-btn" data-category="chatbot">💬 AI聊天</button>
-            <button class="category-btn" data-category="image">🎨 AI图像</button>
-            <button class="category-btn" data-category="video">🎬 AI视频</button>
-            <button class="category-btn" data-category="audio">🎵 AI音频</button>
-            <button class="category-btn" data-category="programming">💻 AI编程</button>
-            <button class="category-btn" data-category="writing">✍️ AI写作</button>
-            <button class="category-btn" data-category="office">📊 AI办公</button>
-            <button class="category-btn" data-category="agent">🤖 AI智能体</button>
-            <button class="category-btn" data-category="search">🔍 AI搜索</button>
-            <button class="category-btn" data-category="design">🎯 AI设计</button>
-            <button class="category-btn" data-category="other">📦 其他</button>
-        </div>
+        <div class="categories" id="categories"></div>
         <div class="tools-grid" id="toolsGrid">
             <div class="loading">加载中...</div>
         </div>
@@ -126,54 +128,115 @@
                 </div>
             </div>
         </section>
+        <section class="api-section" id="api">
+            <h2 class="api-title">🔌 开放API接口</h2>
+            <p class="api-desc">为开发者提供AI工具数据API接口，可用于构建自己的AI导航网站或应用</p>
+            <div class="api-endpoint">
+                <span class="api-method">GET</span> https://jndshierchao.github.io/super-spork/tools.json
+            </div>
+            <p class="api-params">返回格式: JSON | 无需认证 | CORS支持</p>
+            <div style="margin-top:1rem">
+                <a href="tools.json" target="_blank" class="tool-link">📥 下载JSON数据</a>
+            </div>
+        </section>
     </main>
     <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
     <footer>
-        <p>© 2026 AI工具集 | 仅供学习交流，如有问题请联系删除</p>
+        <p>© 2026 AI工具集 | 数据来源: ai-bot.cn | 仅供学习交流</p>
     </footer>
     <script>
         let tools = [];
         let currentCategory = 'all';
+        let categoryStats = {};
+        const categoryNames = {
+            'chatbot':'💬 AI聊天',
+            'image':'🎨 AI图像',
+            'video':'🎬 AI视频',
+            'audio':'🎵 AI音频',
+            'programming':'💻 AI编程',
+            'writing':'✍️ AI写作',
+            'office':'📊 AI办公',
+            'agent':'🤖 AI智能体',
+            'search':'🔍 AI搜索',
+            'design':'🎯 AI设计',
+            '3d':'🎮 AI 3D',
+            'learning':'📚 AI学习',
+            'other':'📦 其他'
+        };
         async function loadTools() {
             try {
                 const res = await fetch('tools.json');
                 tools = await res.json();
+                calcCategoryStats();
+                renderCategories();
                 document.getElementById('toolCount').textContent = tools.length + '+';
                 renderTools(tools);
-            } catch (e) {
-                document.getElementById('toolsGrid').innerHTML = '<p style="color:var(--secondary);text-align:center">数据加载失败，请刷新重试</p>';
+            } catch(e) {
+                document.getElementById('toolsGrid').innerHTML = '<p class="empty-state">数据加载失败，请刷新重试</p>';
             }
+        }
+        function calcCategoryStats() {
+            categoryStats = {'all': tools.length};
+            tools.forEach(t => {
+                categoryStats[t.category] = (categoryStats[t.category] || 0) + 1;
+            });
+        }
+        function renderCategories() {
+            const container = document.getElementById('categories');
+            let html = `<button class="category-btn active" data-category="all">全部<span class="count">${tools.length}</span></button>`;
+            Object.keys(categoryNames).forEach(cat => {
+                const count = categoryStats[cat] || 0;
+                if(count > 0) {
+                    html += `<button class="category-btn" data-category="${cat}">${categoryNames[cat]}<span class="count">${count}</span></button>`;
+                }
+            });
+            container.innerHTML = html;
+            container.querySelectorAll('.category-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelector('.category-btn.active').classList.remove('active');
+                    btn.classList.add('active');
+                    currentCategory = btn.dataset.category;
+                    renderTools(tools);
+                });
+            });
         }
         function renderTools(list) {
             const grid = document.getElementById('toolsGrid');
             const filtered = currentCategory === 'all' ? list : list.filter(t => t.category === currentCategory);
-            if (filtered.length === 0) {
-                grid.innerHTML = '<p style="color:var(--text-secondary);text-align:center;padding:2rem">该分类暂无工具</p>';
+            if(filtered.length === 0) {
+                grid.innerHTML = '<div class="empty-state">该分类暂无工具</div>';
                 return;
             }
-            grid.innerHTML = filtered.map(t => `
-                <div class="tool-card">
-                    <div class="tool-icon">${t.icon}</div>
-                    <div class="tool-name">${t.name}</div>
-                    <div class="tool-desc">${t.desc}</div>
-                    <div class="tool-tags">
-                        ${t.tags.map(tag => `<span class="tag ${tag.includes('免费') || t.hot ? 'hot' : ''}">${tag}</span>`).join('')}
+            grid.innerHTML = filtered.map(t => {
+                const catName = categoryNames[t.category] || t.categoryName || t.category;
+                const tags = t.tags.map(tag => {
+                    const isHot = tag.includes('免费') || tag.includes('hot') || t.hot;
+                    const isFree = tag.includes('免费') || tag.includes('开源');
+                    return `<span class="tag ${isHot?'hot':''} ${isFree&&!isHot?'free':''}">${tag}</span>`;
+                }).join('');
+                return `<div class="tool-card">
+                    <div class="tool-header">
+                        <span class="tool-icon">${t.icon}</span>
+                        <div>
+                            <div class="tool-name">${t.name}</div>
+                            <span class="tool-category">${catName}</span>
+                        </div>
                     </div>
-                    <a href="${t.url}" target="_blank" class="tool-link">访问 →</a>
-                </div>
-            `).join('');
+                    <div class="tool-desc">${t.desc}</div>
+                    <div class="tool-tags">${tags}</div>
+                    <a href="${t.url}" target="_blank" rel="noopener noreferrer" class="tool-link">访问 →</a>
+                </div>`;
+            }).join('');
         }
-        document.querySelectorAll('.category-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                document.querySelector('.category-btn.active').classList.remove('active');
-                btn.classList.add('active');
-                currentCategory = btn.dataset.category;
-                renderTools(tools);
-            });
-        });
         document.getElementById('searchInput').addEventListener('input', e => {
-            const q = e.target.value.toLowerCase();
-            const filtered = tools.filter(t => t.name.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q) || t.categoryName.toLowerCase().includes(q));
+            const q = e.target.value.toLowerCase().trim();
+            if(!q) { renderTools(tools); return; }
+            const filtered = tools.filter(t => 
+                t.name.toLowerCase().includes(q) || 
+                (t.desc&&t.desc.toLowerCase().includes(q)) ||
+                (t.categoryName&&t.categoryName.toLowerCase().includes(q)) ||
+                (t.tags&&t.tags.some(tag=>tag.toLowerCase().includes(q)))
+            );
             renderTools(filtered);
         });
         function toggleTheme() {
