@@ -13,103 +13,167 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root{--primary:#6366f1;--primary-dark:#4f46e5;--secondary:#ec4899;--bg:#0f172a;--bg-secondary:#1e293b;--bg-card:#334155;--text:#f8fafc;--text-secondary:#94a3b8;--gradient:linear-gradient(135deg,#6366f1 0%,#ec4899 100%);--success:#22c55e;--warning:#f59e0b;--border:rgba(99,102,241,0.2)}
-        [data-theme="light"]{--bg:#f8fafc;--bg-secondary:#ffffff;--bg-card:#e2e8f0;--text:#1e293b;--text-secondary:#64748b;--border:rgba(0,0,0,0.1)}
+        :root{--primary:#6366f1;--primary-dark:#4f46e5;--primary-light:#818cf8;--secondary:#ec4899;--bg:#0f172a;--bg-secondary:#1e293b;--bg-card:#334155;--bg-glass:rgba(30,41,59,0.8);--text:#f8fafc;--text-secondary:#94a3b8;--gradient:linear-gradient(135deg,#6366f1 0%,#ec4899 100%);--gradient-2:linear-gradient(135deg,#818cf8 0%,#f472b6 100%);--success:#22c55e;--border:rgba(255,255,255,0.1)}
+        [data-theme="light"]{--bg:#f8fafc;--bg-secondary:#ffffff;--bg-card:#e2e8f0;--bg-glass:rgba(255,255,255,0.9);--text:#1e293b;--text-secondary:#64748b;--border:rgba(0,0,0,0.1)}
         *{margin:0;padding:0;box-sizing:border-box}
-        body{font-family:'Noto Sans SC',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background .3s,color .3s}
+        body{font-family:'Noto Sans SC',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background .3s,color .3s;overflow-x:hidden}
         a{text-decoration:none;color:inherit}
-        header{background:var(--bg-secondary);border-bottom:1px solid var(--border);position:fixed;width:100%;top:0;z-index:100;backdrop-filter:blur(10px)}
-        .header-content{max-width:1400px;margin:0 auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-        .logo{font-size:1.5rem;font-weight:700;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-        .nav{display:flex;gap:1.5rem;align-items:center}
-        .nav a{color:var(--text-secondary);transition:color .3s}
-        .nav a:hover{color:var(--primary)}
-        .header-right{display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
-        .theme-toggle{background:var(--bg-card);border:none;color:var(--text);padding:.5rem;border-radius:8px;cursor:pointer;font-size:1.2rem}
-        .search-box{background:var(--bg-secondary);border:1px solid var(--border);border-radius:12px;padding:.75rem 1rem;width:220px;color:var(--text);transition:border-color .3s;font-size:.9rem}
-        .search-box:focus{outline:none;border-color:var(--primary)}
-        main{max-width:1400px;margin:0 auto;padding:7rem 2rem 2rem}
-        .hero{text-align:center;padding:2rem 0}
-        .hero h1{font-size:2.5rem;margin-bottom:1rem}
-        .hero p{color:var(--text-secondary);font-size:1.1rem;max-width:600px;margin:0 auto}
-        .stats{display:flex;justify-content:center;gap:3rem;margin-top:1.5rem}
-        .stat{text-align:center}
+        /* 动态背景 */
+        .bg-effects{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;overflow:hidden}
+        .bg-orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.4;animation:float 20s ease-in-out infinite}
+        .bg-orb:nth-child(1){width:500px;height:500px;background:var(--primary);top:-100px;left:-100px}
+        .bg-orb:nth-child(2){width:400px;height:400px;background:var(--secondary);top:50%;right:-100px;animation-delay:-7s}
+        .bg-orb:nth-child(3){width:300px;height:300px;background:#06b6d4;bottom:-50px;left:30%;animation-delay:-14s}
+        @keyframes float{0%,100%{transform:translate(0,0) scale(1)}25%{transform:translate(50px,-30px) scale(1.1)}50%{transform:translate(-20px,50px) scale(.9)}75%{transform:translate(-50px,-20px) scale(1.05)}}
+        /* Header */
+        header{background:var(--bg-glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border);position:fixed;width:100%;top:0;z-index:1000;transition:all .3s}
+        .header-content{max-width:1400px;margin:0 auto;padding:.75rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+        /* Logo */
+        .logo{display:flex;align-items:center;gap:.75rem;cursor:pointer}
+        .logo-icon{width:42px;height:42px;background:var(--gradient);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 4px 15px rgba(99,102,241,.3);transition:transform .3s,box-shadow .3s}
+        .logo:hover .logo-icon{transform:translateY(-2px);box-shadow:0 6px 20px rgba(99,102,241,.4)}
+        .logo-text{display:flex;flex-direction:column}
+        .logo-title{font-size:1.25rem;font-weight:700;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-.5px}
+        .logo-subtitle{font-size:.7rem;color:var(--text-secondary);letter-spacing:.5px}
+        /* 菜单导航 */
+        .nav-menu{display:flex;align-items:center;gap:.25rem;background:var(--bg-card);padding:.35rem;border-radius:14px}
+        .nav-item{display:flex;align-items:center;gap:.4rem;padding:.5rem 1rem;border-radius:10px;color:var(--text-secondary);font-size:.9rem;font-weight:500;transition:all .25s;cursor:pointer;white-space:nowrap}
+        .nav-item:hover{color:var(--text);background:rgba(255,255,255,.1)}
+        .nav-item.active{background:var(--gradient);color:#fff;box-shadow:0 2px 10px rgba(99,102,241,.3)}
+        .nav-item .icon{font-size:1rem}
+        /* 搜索框 */
+        .search-wrapper{position:relative;flex:1;max-width:320px}
+        .search-box{width:100%;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:.65rem 1rem .65rem 2.75rem;color:var(--text);font-size:.9rem;transition:all .3s}
+        .search-box:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(99,102,241,.15)}
+        .search-box::placeholder{color:var(--text-secondary)}
+        .search-icon{position:absolute;left:1rem;top:50%;transform:translateY(-50%);color:var(--text-secondary);font-size:1rem}
+        /* 主题切换 */
+        .header-actions{display:flex;align-items:center;gap:.75rem}
+        .theme-toggle{width:40px;height:40px;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;cursor:pointer;font-size:1.2rem;transition:all .3s;display:flex;align-items:center;justify-content:center}
+        .theme-toggle:hover{background:var(--primary);border-color:var(--primary);transform:translateY(-2px);box-shadow:0 4px 15px rgba(99,102,241,.3)}
+        /* 移动端菜单 */
+        .mobile-menu-btn{display:none;width:40px;height:40px;background:var(--bg-card);border:1px solid var(--border);border-radius:10px;cursor:pointer;font-size:1.3rem}
+        /* 主内容 */
+        main{max-width:1400px;margin:0 auto;padding:7rem 1.5rem 2rem}
+        .hero{text-align:center;padding:2.5rem 0;position:relative}
+        .hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:linear-gradient(135deg,rgba(99,102,241,.15),rgba(236,72,153,.15));border:1px solid var(--border);padding:.4rem 1rem;border-radius:20px;font-size:.85rem;color:var(--primary);margin-bottom:1.5rem;animation:pulse 2s ease-in-out infinite}
+        @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(99,102,241,.4)}50%{box-shadow:0 0 0 10px rgba(99,102,241,0)}}
+        .hero h1{font-size:3rem;font-weight:700;margin-bottom:1rem;line-height:1.2}
+        .hero h1 span{background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .hero p{color:var(--text-secondary);font-size:1.15rem;max-width:600px;margin:0 auto 2rem}
+        .stats{display:flex;justify-content:center;gap:3rem}
+        .stat{text-align:center;padding:1rem 1.5rem;background:var(--bg-glass);backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:16px;min-width:120px}
         .stat-num{font-size:2rem;font-weight:700;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-        .stat-label{color:var(--text-secondary)}
-        .categories{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:1.5rem 0}
-        .category-btn{background:var(--bg-card);border:1px solid var(--border);padding:.5rem 1rem;border-radius:20px;cursor:pointer;color:var(--text);transition:all .3s;font-size:.85rem;display:flex;align-items:center;gap:.3rem}
-        .category-btn:hover,.category-btn.active{background:var(--primary);border-color:var(--primary);color:#fff}
-        .category-btn .count{background:rgba(255,255,255,.2);padding:.1rem .4rem;border-radius:8px;font-size:.75rem}
-        .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;margin-top:1.5rem}
-        .tool-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:16px;padding:1.25rem;transition:all .3s}
-        .tool-card:hover{transform:translateY(-4px);border-color:var(--primary);box-shadow:0 10px 40px rgba(99,102,241,0.15)}
-        .tool-header{display:flex;align-items:center;gap:1rem;margin-bottom:.75rem}
-        .tool-icon{font-size:2rem}
-        .tool-name{font-size:1.05rem;font-weight:600}
-        .tool-category{font-size:.75rem;color:var(--primary);background:rgba(99,102,241,.15);padding:.2rem .5rem;border-radius:4px}
-        .tool-desc{color:var(--text-secondary);font-size:.85rem;margin-bottom:.75rem;line-height:1.5}
+        .stat-label{color:var(--text-secondary);font-size:.85rem}
+        /* 分类导航 */
+        .categories{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center;margin:2rem 0;padding:1rem;background:var(--bg-glass);backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:16px}
+        .category-btn{background:var(--bg-card);border:1px solid var(--border);padding:.5rem 1rem;border-radius:10px;cursor:pointer;color:var(--text-secondary);transition:all .3s;font-size:.85rem;display:flex;align-items:center;gap:.4rem;font-family:inherit}
+        .category-btn:hover,.category-btn.active{background:var(--gradient);border-color:transparent;color:#fff;transform:translateY(-2px);box-shadow:0 4px 15px rgba(99,102,241,.3)}
+        .category-btn .count{background:rgba(255,255,255,.2);padding:.15rem .5rem;border-radius:6px;font-size:.75rem}
+        .category-btn.active .count{background:rgba(255,255,255,.3)}
+        /* 工具卡片 */
+        .tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem;margin-top:1.5rem}
+        .tool-card{background:var(--bg-secondary);border:1px solid var(--border);border-radius:16px;padding:1.5rem;transition:all .3s;position:relative;overflow:hidden}
+        .tool-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gradient);opacity:0;transition:opacity .3s}
+        .tool-card:hover{transform:translateY(-5px);border-color:var(--primary);box-shadow:0 15px 40px rgba(99,102,241,.2)}
+        .tool-card:hover::before{opacity:1}
+        .tool-header{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+        .tool-icon{width:52px;height:52px;background:linear-gradient(135deg,var(--bg-card),var(--bg));border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;box-shadow:0 4px 10px rgba(0,0,0,.2)}
+        .tool-info{flex:1}
+        .tool-name{font-size:1.1rem;font-weight:600;margin-bottom:.25rem}
+        .tool-category{font-size:.75rem;color:var(--primary);background:rgba(99,102,241,.15);padding:.2rem .6rem;border-radius:6px;display:inline-block}
+        .tool-desc{color:var(--text-secondary);font-size:.88rem;margin-bottom:1rem;line-height:1.6}
         .tool-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
-        .tag{background:var(--bg-card);padding:.2rem .6rem;border-radius:10px;font-size:.75rem;color:var(--text-secondary)}
+        .tag{background:var(--bg-card);padding:.25rem .7rem;border-radius:8px;font-size:.75rem;color:var(--text-secondary);transition:all .2s}
+        .tag:hover{background:var(--primary);color:#fff}
         .tag.hot{background:linear-gradient(135deg,#ef4444,#f97316);color:#fff}
         .tag.free{background:var(--success);color:#fff}
-        .tool-link{display:inline-block;background:var(--primary);color:#fff;padding:.45rem 1rem;border-radius:8px;font-size:.85rem;transition:background .3s}
-        .tool-link:hover{background:var(--primary-dark)}
-        .news-section{margin-top:3rem;padding:1.5rem;background:var(--bg-secondary);border-radius:16px}
-        .news-title{font-size:1.3rem;margin-bottom:1.25rem;display:flex;align-items:center;gap:.5rem}
-        .news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
-        .news-card{background:var(--bg-card);padding:1.25rem;border-radius:12px}
-        .news-date{color:var(--primary);font-size:.8rem;margin-bottom:.4rem}
-        .news-title-text{font-weight:600;margin-bottom:.4rem;font-size:.95rem}
-        .news-summary{color:var(--text-secondary);font-size:.85rem}
-        .back-to-top{position:fixed;bottom:2rem;right:2rem;background:var(--primary);color:#fff;width:48px;height:48px;border-radius:50%;border:none;cursor:pointer;opacity:0;transition:opacity .3s;font-size:1.3rem;display:flex;align-items:center;justify-content:center}
-        .back-to-top.show{opacity:1}
-        footer{background:var(--bg-secondary);padding:1.5rem;text-align:center;margin-top:3rem;border-top:1px solid var(--border)}
-        footer p{color:var(--text-secondary);font-size:.9rem}
-        .loading{text-align:center;padding:2rem;color:var(--text-secondary)}
-        .empty-state{text-align:center;padding:3rem;color:var(--text-secondary)}
-        .api-section{background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(236,72,153,.1));border:1px solid var(--border);border-radius:16px;padding:2rem;margin-top:3rem}
-        .api-title{font-size:1.3rem;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+        .tool-footer{display:flex;justify-content:space-between;align-items:center}
+        .tool-link{display:inline-flex;align-items:center;gap:.4rem;background:var(--gradient);color:#fff;padding:.6rem 1.25rem;border-radius:10px;font-size:.9rem;font-weight:500;transition:all .3s;box-shadow:0 4px 15px rgba(99,102,241,.3)}
+        .tool-link:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(99,102,241,.4)}
+        /* 资讯 */
+        .news-section{margin-top:3rem;padding:2rem;background:var(--bg-glass);backdrop-filter:blur(10px);border:1px solid var(--border);border-radius:20px}
+        .section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem}
+        .news-title{font-size:1.4rem;font-weight:600;display:flex;align-items:center;gap:.75rem}
+        .news-title::before{content:'';width:4px;height:24px;background:var(--gradient);border-radius:2px}
+        .news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+        .news-card{background:var(--bg-card);padding:1.5rem;border-radius:14px;transition:all .3s;border:1px solid transparent}
+        .news-card:hover{border-color:var(--primary);transform:translateY(-3px)}
+        .news-date{color:var(--primary);font-size:.8rem;font-weight:500;margin-bottom:.5rem}
+        .news-title-text{font-weight:600;margin-bottom:.5rem;font-size:1rem;line-height:1.4}
+        .news-summary{color:var(--text-secondary);font-size:.85rem;line-height:1.6}
+        /* API */
+        .api-section{background:linear-gradient(135deg,rgba(99,102,241,.1),rgba(236,72,153,.1));border:1px solid var(--border);border-radius:20px;padding:2rem;margin-top:3rem}
+        .api-title{font-size:1.4rem;font-weight:600;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+        .api-title::before{content:'';width:4px;height:24px;background:var(--gradient);border-radius:2px}
         .api-desc{color:var(--text-secondary);margin-bottom:1.5rem}
-        .api-endpoint{background:var(--bg-card);padding:1rem;border-radius:8px;font-family:monospace;font-size:.9rem;margin-bottom:1rem;overflow-x:auto}
-        .api-method{display:inline-block;background:var(--success);color:#fff;padding:.2rem .6rem;border-radius:4px;font-size:.8rem;margin-right:.5rem}
-        .api-params{font-size:.85rem;color:var(--text-secondary)}
-        @media(max-width:768px){.header-content{flex-direction:column}.search-box{width:100%}.hero h1{font-size:1.8rem}.stats{flex-wrap:wrap;gap:1.5rem}.tools-grid{grid-template-columns:1fr}}
+        .api-endpoint{background:var(--bg-card);padding:1.25rem;border-radius:12px;font-family:monospace;font-size:.95rem;margin-bottom:1rem;display:flex;align-items:center;gap:.75rem;flex-wrap:wrap}
+        .api-method{background:var(--success);color:#fff;padding:.3rem .8rem;border-radius:6px;font-size:.85rem;font-weight:600}
+        .api-url{flex:1;word-break:break-all}
+        .api-params{color:var(--text-secondary);font-size:.85rem}
+        /* 回到顶部 */
+        .back-to-top{position:fixed;bottom:2rem;right:2rem;background:var(--gradient);color:#fff;width:50px;height:50px;border-radius:14px;border:none;cursor:pointer;opacity:0;transition:all .3s;font-size:1.3rem;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(99,102,241,.4)}
+        .back-to-top.show{opacity:1}
+        .back-to-top:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(99,102,241,.5)}
+        /* Footer */
+        footer{background:var(--bg-secondary);padding:2rem;text-align:center;margin-top:3rem;border-top:1px solid var(--border)}
+        footer p{color:var(--text-secondary);font-size:.9rem}
+        .loading{text-align:center;padding:3rem;color:var(--text-secondary)}
+        .empty-state{text-align:center;padding:3rem;color:var(--text-secondary)}
+        @media(max-width:1024px){.nav-menu{display:none}.mobile-menu-btn{display:flex;align-items:center;justify-content:center}}
+        @media(max-width:768px){.header-content{flex-wrap:wrap;gap:.75rem}.search-wrapper{max-width:100%;order:3}.hero h1{font-size:2rem}.stats{flex-wrap:wrap;gap:1rem}.tools-grid{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
+    <div class="bg-effects">
+        <div class="bg-orb"></div>
+        <div class="bg-orb"></div>
+        <div class="bg-orb"></div>
+    </div>
     <header>
         <div class="header-content">
-            <a href="/" class="logo">🤖 AI工具集</a>
-            <nav class="nav">
-                <a href="#tools">工具</a>
-                <a href="#news">资讯</a>
-                <a href="#api">API</a>
-                <a href="privacy.html">隐私政策</a>
+            <div class="logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+                <div class="logo-icon">🤖</div>
+                <div class="logo-text">
+                    <span class="logo-title">AI工具集</span>
+                    <span class="logo-subtitle">发现最好的AI</span>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <a class="nav-item active" href="#tools"><span class="icon">🛠️</span> AI工具</a>
+                <a class="nav-item" href="#news"><span class="icon">📰</span> 资讯</a>
+                <a class="nav-item" href="#api"><span class="icon">🔌</span> API</a>
+                <a class="nav-item" href="privacy.html"><span class="icon">📜</span> 隐私</a>
             </nav>
-            <div class="header-right">
-                <input type="text" class="search-box" placeholder="🔍 搜索AI工具..." id="searchInput">
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-box" placeholder="搜索180+AI工具..." id="searchInput">
+            </div>
+            <div class="header-actions">
                 <button class="theme-toggle" onclick="toggleTheme()" title="切换主题">🌙</button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
             </div>
         </div>
     </header>
     <main>
         <section class="hero">
-            <h1>发现最好的AI工具 🤖</h1>
-            <p>收录全球180+优质AI工具，覆盖写作、绘画、视频、编程等全场景，让AI助你提升效率</p>
+            <div class="hero-badge">✨ 2026年最新AI工具导航</div>
+            <h1>发现全球最优质的<span>AI工具</span></h1>
+            <p>收录全球180+优质AI工具，覆盖写作、绘画、视频、编程等全场景，让AI助你提升10倍效率</p>
             <div class="stats">
                 <div class="stat"><div class="stat-num" id="toolCount">180+</div><div class="stat-label">精选工具</div></div>
                 <div class="stat"><div class="stat-num">12</div><div class="stat-label">分类覆盖</div></div>
-                <div class="stat"><div class="stat-num">API</div><div class="stat-label">开放接口</div></div>
+                <div class="stat"><div class="stat-num">100%</div><div class="stat-label">免费推荐</div></div>
             </div>
         </section>
         <div class="categories" id="categories"></div>
-        <div class="tools-grid" id="toolsGrid">
-            <div class="loading">加载中...</div>
-        </div>
+        <div class="tools-grid" id="toolsGrid"><div class="loading">加载中...</div></div>
         <section class="news-section" id="news">
-            <h2 class="news-title">📰 AI资讯速递</h2>
+            <div class="section-header">
+                <h2 class="news-title">📰 AI资讯速递</h2>
+            </div>
             <div class="news-grid">
                 <div class="news-card">
                     <div class="news-date">2026-04-09</div>
@@ -132,123 +196,29 @@
             <h2 class="api-title">🔌 开放API接口</h2>
             <p class="api-desc">为开发者提供AI工具数据API接口，可用于构建自己的AI导航网站或应用</p>
             <div class="api-endpoint">
-                <span class="api-method">GET</span> https://jndshierchao.github.io/super-spork/tools.json
+                <span class="api-method">GET</span>
+                <span class="api-url">https://jndshierchao.github.io/super-spork/tools.json</span>
             </div>
-            <p class="api-params">返回格式: JSON | 无需认证 | CORS支持</p>
-            <div style="margin-top:1rem">
-                <a href="tools.json" target="_blank" class="tool-link">📥 下载JSON数据</a>
-            </div>
+            <p class="api-params">返回格式: JSON | 无需认证 | CORS支持 | 可直接调用</p>
+            <a href="tools.json" target="_blank" class="tool-link">📥 下载JSON数据</a>
         </section>
     </main>
     <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
     <footer>
-        <p>© 2026 AI工具集 | 数据来源: ai-bot.cn | 仅供学习交流</p>
+        <p>© 2026 AI工具集 | 数据来源: ai-bot.cn | 仅供学习交流 如有侵权请联系删除</p>
     </footer>
     <script>
-        let tools = [];
-        let currentCategory = 'all';
-        let categoryStats = {};
-        const categoryNames = {
-            'chatbot':'💬 AI聊天',
-            'image':'🎨 AI图像',
-            'video':'🎬 AI视频',
-            'audio':'🎵 AI音频',
-            'programming':'💻 AI编程',
-            'writing':'✍️ AI写作',
-            'office':'📊 AI办公',
-            'agent':'🤖 AI智能体',
-            'search':'🔍 AI搜索',
-            'design':'🎯 AI设计',
-            '3d':'🎮 AI 3D',
-            'learning':'📚 AI学习',
-            'other':'📦 其他'
-        };
-        async function loadTools() {
-            try {
-                const res = await fetch('tools.json');
-                tools = await res.json();
-                calcCategoryStats();
-                renderCategories();
-                document.getElementById('toolCount').textContent = tools.length + '+';
-                renderTools(tools);
-            } catch(e) {
-                document.getElementById('toolsGrid').innerHTML = '<p class="empty-state">数据加载失败，请刷新重试</p>';
-            }
-        }
-        function calcCategoryStats() {
-            categoryStats = {'all': tools.length};
-            tools.forEach(t => {
-                categoryStats[t.category] = (categoryStats[t.category] || 0) + 1;
-            });
-        }
-        function renderCategories() {
-            const container = document.getElementById('categories');
-            let html = `<button class="category-btn active" data-category="all">全部<span class="count">${tools.length}</span></button>`;
-            Object.keys(categoryNames).forEach(cat => {
-                const count = categoryStats[cat] || 0;
-                if(count > 0) {
-                    html += `<button class="category-btn" data-category="${cat}">${categoryNames[cat]}<span class="count">${count}</span></button>`;
-                }
-            });
-            container.innerHTML = html;
-            container.querySelectorAll('.category-btn').forEach(btn => {
-                btn.addEventListener('click', () => {
-                    document.querySelector('.category-btn.active').classList.remove('active');
-                    btn.classList.add('active');
-                    currentCategory = btn.dataset.category;
-                    renderTools(tools);
-                });
-            });
-        }
-        function renderTools(list) {
-            const grid = document.getElementById('toolsGrid');
-            const filtered = currentCategory === 'all' ? list : list.filter(t => t.category === currentCategory);
-            if(filtered.length === 0) {
-                grid.innerHTML = '<div class="empty-state">该分类暂无工具</div>';
-                return;
-            }
-            grid.innerHTML = filtered.map(t => {
-                const catName = categoryNames[t.category] || t.categoryName || t.category;
-                const tags = t.tags.map(tag => {
-                    const isHot = tag.includes('免费') || tag.includes('hot') || t.hot;
-                    const isFree = tag.includes('免费') || tag.includes('开源');
-                    return `<span class="tag ${isHot?'hot':''} ${isFree&&!isHot?'free':''}">${tag}</span>`;
-                }).join('');
-                return `<div class="tool-card">
-                    <div class="tool-header">
-                        <span class="tool-icon">${t.icon}</span>
-                        <div>
-                            <div class="tool-name">${t.name}</div>
-                            <span class="tool-category">${catName}</span>
-                        </div>
-                    </div>
-                    <div class="tool-desc">${t.desc}</div>
-                    <div class="tool-tags">${tags}</div>
-                    <a href="${t.url}" target="_blank" rel="noopener noreferrer" class="tool-link">访问 →</a>
-                </div>`;
-            }).join('');
-        }
-        document.getElementById('searchInput').addEventListener('input', e => {
-            const q = e.target.value.toLowerCase().trim();
-            if(!q) { renderTools(tools); return; }
-            const filtered = tools.filter(t => 
-                t.name.toLowerCase().includes(q) || 
-                (t.desc&&t.desc.toLowerCase().includes(q)) ||
-                (t.categoryName&&t.categoryName.toLowerCase().includes(q)) ||
-                (t.tags&&t.tags.some(tag=>tag.toLowerCase().includes(q)))
-            );
-            renderTools(filtered);
-        });
-        function toggleTheme() {
-            const html = document.documentElement;
-            const isDark = html.getAttribute('data-theme') !== 'light';
-            html.setAttribute('data-theme', isDark ? 'light' : 'dark');
-            document.querySelector('.theme-toggle').textContent = isDark ? '☀️' : '🌙';
-        }
-        window.addEventListener('scroll', () => {
-            document.getElementById('backToTop').classList.toggle('show', window.scrollY > 300);
-        });
-        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+        let tools=[],currentCategory='all',categoryStats={};
+        const categoryNames={'chatbot':'💬 AI聊天','image':'🎨 AI图像','video':'🎬 AI视频','audio':'🎵 AI音频','programming':'💻 AI编程','writing':'✍️ AI写作','office':'📊 AI办公','agent':'🤖 AI智能体','search':'🔍 AI搜索','design':'🎯 AI设计','3d':'🎮 AI 3D','learning':'📚 AI学习','other':'📦 其他'};
+        async function loadTools(){try{const res=await fetch('tools.json');tools=await res.json();calcCategoryStats();renderCategories();document.getElementById('toolCount').textContent=tools.length+'+';renderTools(tools)}catch(e){document.getElementById('toolsGrid').innerHTML='<p class="empty-state">数据加载失败</p>'}}
+        function calcCategoryStats(){categoryStats={'all':tools.length};tools.forEach(t=>{categoryStats[t.category]=(categoryStats[t.category]||0)+1})}
+        function renderCategories(){const c=document.getElementById('categories');let h=`<button class="category-btn active" data-category="all">🏠 全部<span class="count">${tools.length}</span></button>`;Object.keys(categoryNames).forEach(cat=>{const n=categoryStats[cat]||0;if(n>0)h+=`<button class="category-btn" data-category="${cat}">${categoryNames[cat]}<span class="count">${n}</span></button>`});c.innerHTML=h;c.querySelectorAll('.category-btn').forEach(b=>{b.onclick=()=>{document.querySelector('.category-btn.active').classList.remove('active');b.classList.add('active');currentCategory=b.dataset.category;renderTools(tools) }})}
+        function renderTools(list){const g=document.getElementById('toolsGrid');const f=currentCategory==='all'?list:list.filter(t=>t.category===currentCategory);if(f.length===0){g.innerHTML='<p class="empty-state">该分类暂无工具</p>';return}g.innerHTML=f.map(t=>{const cn=categoryNames[t.category]||t.categoryName||t.category;const tags=t.tags.map(tag=>{const isHot=tag.includes('免费')||tag.includes('hot')||t.hot;const isFree=tag.includes('免费')||tag.includes('开源');return`<span class="tag ${isHot?'hot':''} ${isFree&&!isHot?'free':''}">${tag}</span>`}).join('');return`<div class="tool-card"><div class="tool-header"><div class="tool-icon">${t.icon}</div><div class="tool-info"><div class="tool-name">${t.name}</div><span class="tool-category">${cn}</span></div></div><div class="tool-desc">${t.desc}</div><div class="tool-tags">${tags}</div><div class="tool-footer"><a href="${t.url}" target="_blank" rel="noopener noreferrer" class="tool-link">访问 →</a></div></div>`}).join('')}
+        document.getElementById('searchInput').oninput=e=>{const q=e.target.value.toLowerCase().trim();renderTools(q?tools.filter(t=>t.name.toLowerCase().includes(q)||(t.desc&&t.desc.toLowerCase().includes(q))||(t.categoryName&&t.categoryName.toLowerCase().includes(q))||(t.tags&&t.tags.some(tag=>tag.toLowerCase().includes(q)))):tools)};
+        function toggleTheme(){const h=document.documentElement;h.setAttribute('data-theme',h.getAttribute('data-theme')==='light'?'':'light');document.querySelector('.theme-toggle').textContent=h.getAttribute('data-theme')==='light'?'🌙':'☀️'}
+        window.onscroll=()=>{document.getElementById('backToTop').classList.toggle('show',scrollY>300)};
+        function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'})}
+        function toggleMobileMenu(){document.querySelector('.nav-menu').classList.toggle('show')}
         loadTools();
     </script>
 </body>
